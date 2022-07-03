@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3130DE1D287221CB0077A4FB /* ChargerLoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130DE1C287221CB0077A4FB /* ChargerLoginContract.swift */; };
 		31961140287079D50068F5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3196113F287079D50068F5C3 /* AppDelegate.swift */; };
 		31961142287079D50068F5C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31961141287079D50068F5C3 /* SceneDelegate.swift */; };
 		31961144287079D50068F5C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31961143287079D50068F5C3 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3130DE1C287221CB0077A4FB /* ChargerLoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginContract.swift; sourceTree = "<group>"; };
 		3196113C287079D50068F5C3 /* charger_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = charger_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3196113F287079D50068F5C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31961141287079D50068F5C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3130DE1A2872217D0077A4FB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3130DE1B287221A90077A4FB /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3130DE1B287221A90077A4FB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				31961143287079D50068F5C3 /* ViewController.swift */,
+				3130DE1C287221CB0077A4FB /* ChargerLoginContract.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		31961133287079D50068F5C3 = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +120,9 @@
 		3196113E287079D50068F5C3 /* charger_app */ = {
 			isa = PBXGroup;
 			children = (
+				3130DE1A2872217D0077A4FB /* Modules */,
 				3196113F287079D50068F5C3 /* AppDelegate.swift */,
 				31961141287079D50068F5C3 /* SceneDelegate.swift */,
-				31961143287079D50068F5C3 /* ViewController.swift */,
 				31961145287079D50068F5C3 /* Main.storyboard */,
 				31961148287079D90068F5C3 /* Assets.xcassets */,
 				3196114A287079D90068F5C3 /* LaunchScreen.storyboard */,
@@ -263,6 +282,7 @@
 			files = (
 				31961144287079D50068F5C3 /* ViewController.swift in Sources */,
 				31961140287079D50068F5C3 /* AppDelegate.swift in Sources */,
+				3130DE1D287221CB0077A4FB /* ChargerLoginContract.swift in Sources */,
 				31961142287079D50068F5C3 /* SceneDelegate.swift in Sources */,
 				3196117028707DEB0068F5C3 /* Extensions.swift in Sources */,
 			);

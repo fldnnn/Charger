@@ -30,20 +30,34 @@ extension UIColor {
     
 }
  
-extension UIView {
-    //@discardableResult
-
-    func setGradientBackground() {
-        let colorTop =  UIColor.charcoalGrey.cgColor
-        let colorBottom = UIColor.dark.cgColor
-
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorTop, colorBottom]
-        gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.frame = bounds
-
-        //self.view.layer.insertSublayer(gradientLayer, at:0)
-        layer.insertSublayer(gradientLayer, at: 0)
-        //return layer
+//extension UIView {
+//    //@discardableResult
+//
+//    func setGradientBackground() {
+//        let colorTop =  UIColor.charcoalGrey.cgColor
+//        let colorBottom = UIColor.dark.cgColor
+//
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.colors = [colorTop, colorBottom]
+//        gradientLayer.locations = [0.0, 1.0]
+//        gradientLayer.frame = bounds
+//
+//        //self.view.layer.insertSublayer(gradientLayer, at:0)
+//        layer.insertSublayer(gradientLayer, at: 0)
+//        //return layer
+//    }
+//}
+ 
+extension String {
+     
+    func isValidEmail() -> Bool {
+        
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: self)
     }
+}
+ 
+extension UITextField {
+
 }
