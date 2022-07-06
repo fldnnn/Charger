@@ -10,13 +10,15 @@ import Foundation
 protocol LoginViewProtocol: AnyObject {
      
     var presenter: Login.Presenter! { get set }
+     
 }
  
 protocol LoginInteractorProtocol: AnyObject {
      
-    var presenter: Login.Presenter? { get set }
+//    var presenter: Login.Presenter? { get set }
+    var output: Login.InteractorToPresenter? { get set }
     
-    func postData()
+    func postRequest(UserDict: [String: Any])
 }
  
 protocol LoginPresenterProtocol: AnyObject {
@@ -27,23 +29,32 @@ protocol LoginPresenterProtocol: AnyObject {
      
     func didDataFetch()
     func didUserPressLoginButton()
+    func getUserInfo(with UserDict: [String: Any])
+}
+
+protocol LoginInteractorToPresenterProtocol: AnyObject {
+    func userLoggedIn(with userId: Int)
 }
  
 protocol LoginEntityProtocol: AnyObject {
     
 }
 
-protocol LoginPRouterProtocol: AnyObject {
+protocol LoginRouterProtocol: AnyObject {
      
     var presenter: Login.Presenter? { get set }
-     
-    func navigateToAppointmentPage(with name: String)
+//    func startPage()
+      
+  
+//    func navigateToReservationPage(with name: String)
+    func navigateToBooking(with userId: Int)
 }
  
 struct Login {
     typealias View = LoginViewProtocol
     typealias Interactor = LoginInteractorProtocol
+    typealias InteractorToPresenter = LoginInteractorToPresenterProtocol
     typealias Presenter = LoginPresenterProtocol
     typealias Entity = LoginEntityProtocol
-    typealias Router = LoginPRouterProtocol
+    typealias Router = LoginRouterProtocol
 }
