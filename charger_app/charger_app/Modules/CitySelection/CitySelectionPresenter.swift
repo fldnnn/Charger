@@ -15,6 +15,7 @@ class CitySelectionPresenter {
     var router: CitySelection.Router!
     var interactor: CitySelection.Interactor!
     private var cityList: [String]?
+    private var filteredCities: [String]?
 }
 
 extension CitySelectionPresenter: CitySelectionPresenterProtocol {
@@ -23,13 +24,19 @@ extension CitySelectionPresenter: CitySelectionPresenterProtocol {
     }
     
     func getCityList() -> [String] {
-        cityList ?? []
+        filteredCities ?? []
+    }
+    
+    func filterCities(with searchTerm: String) {
+        filteredCities = cityList?.filter({ $0.contains(searchTerm) })
+        view?.reloadTableView()
     }
 }
 
 extension CitySelectionPresenter: CitySelectionInteractorToPresenterProtocol {
     func citiesFetched(_ cityList: [String]) {
         self.cityList = cityList
+        filteredCities = cityList
         view?.reloadTableView()
     }
 }

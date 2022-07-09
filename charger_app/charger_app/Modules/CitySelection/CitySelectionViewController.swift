@@ -25,6 +25,7 @@ class CitySelectionViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
         view.setGradientBackground()
         prepareTableView()
+        citySearchBar.delegate = self
     }
     
     private func prepareTableView() {
@@ -37,5 +38,13 @@ class CitySelectionViewController: UIViewController {
 extension CitySelectionViewController: CitySelectionViewProtocol {
     func reloadTableView() {
         cityTableView.reloadData()
+    }
+}
+
+extension CitySelectionViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if !searchBar.isEmpty {
+            presenter?.filterCities(with: searchBar.text ?? "")
+        }
     }
 }

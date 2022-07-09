@@ -21,6 +21,7 @@ protocol CitySelectionPresenterProtocol: AnyObject {
     
     func viewDidLoad()
     func getCityList() -> [String]
+    func filterCities(with searchTerm: String)
 }
 
 protocol CitySelectionInteractorProtocol: AnyObject {
