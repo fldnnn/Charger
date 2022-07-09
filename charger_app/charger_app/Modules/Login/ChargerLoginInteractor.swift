@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import CoreLocation
  
 class LoginInteractor: Login.Interactor {
     
-    
-//    var presenter: Login.Presenter?
+    var presenter: Login.Presenter?
     weak var output: Login.InteractorToPresenter?
+    let locationService = LocationService()
+    private var location: CLLocationCoordinate2D?
     
     func postRequest(UserDict: [String : Any]) {
           
@@ -65,9 +67,14 @@ class LoginInteractor: Login.Interactor {
               // create json object from data or use JSONDecoder to convert to Model stuct
                 let jsonResponse = try JSONDecoder().decode(LoginResponse.self, from: responseData)
                 print(jsonResponse)
-                // token ı keychain e ekle
+
                 DispatchQueue.main.async {
                     self.output?.userLoggedIn(with: jsonResponse.userId ?? 0)
+                    
+                    // keychain e eklenecek
+                    UserDefaults.standard.set(jsonResponse.token, forKey: "token")
+                    UserDefaults.standard.set(jsonResponse.userId, forKey: "userId")
+                    UserDefaults.standard.set(jsonResponse.email, forKey: "email")
                 }
 //              if let jsonResponse = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as? [String: Any] {
 //                print(jsonResponse)
@@ -83,4 +90,23 @@ class LoginInteractor: Login.Interactor {
           // perform the task
           task.resume()
         }
+     
+    func verifyLocationPermission() {
+        locationService.verifyAndAskLocationPermission { [weak self] result in
+            if result {
+                self?.getUserLocation()
+            }
+        }
+    }
+     
+    func getUserLocation() {
+        locationService.locationDatas = { [weak self]
+            location in self?.location = location
+
+            UserDefaults.standard.set(location.latitude, forKey: "latitude")
+            UserDefaults.standard.set(location.longitude, forKey: "longitude")
+             
+            UserDefaults.standard.set("nil", forKey: "nil")
+        }
+    }
 }

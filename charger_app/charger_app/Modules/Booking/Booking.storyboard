@@ -19,30 +19,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="508-5s-Q5C">
-                                <rect key="frame" x="156.5" y="323" width="62" height="21"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOi-qc-v5I">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="vr0-hd-4r6"/>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Badge" translatesAutoresizingMaskIntoConstraints="NO" id="CpV-AV-myL">
+                                <rect key="frame" x="67" y="138" width="241" height="138"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Henüz bir randevu oluşturmadınız." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qju-40-aYR">
+                                <rect key="frame" x="67" y="344" width="241" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
-                                <color key="highlightedColor" systemColor="labelColor"/>
+                                <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oluşturulan randevular burada listelenir." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3h-uU-9cT">
+                                <rect key="frame" x="32" y="417" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uki-Bz-Egl">
+                                <rect key="frame" x="108" y="518.5" width="159" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="RANDEVU OLUŞTUR"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="508-5s-Q5C" firstAttribute="centerX" secondItem="IFj-I9-EFs" secondAttribute="centerX" id="lQu-vz-lDb"/>
-                            <constraint firstItem="508-5s-Q5C" firstAttribute="centerY" secondItem="IFj-I9-EFs" secondAttribute="centerY" id="nqG-Xh-c1c"/>
+                            <constraint firstItem="L3h-uU-9cT" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leading" constant="32" id="1w8-6c-ISJ"/>
+                            <constraint firstItem="VOi-qc-v5I" firstAttribute="top" secondItem="wT6-ai-9nW" secondAttribute="bottom" id="3E0-Rv-vf1"/>
+                            <constraint firstItem="VOi-qc-v5I" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leading" id="6VV-ST-k4r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uki-Bz-Egl" secondAttribute="trailing" constant="92" id="DR9-4x-jlJ"/>
+                            <constraint firstItem="Qju-40-aYR" firstAttribute="top" secondItem="CpV-AV-myL" secondAttribute="bottom" constant="68" id="ECL-xn-h09"/>
+                            <constraint firstItem="CpV-AV-myL" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="51" id="ENT-0K-UJ6"/>
+                            <constraint firstAttribute="trailing" secondItem="L3h-uU-9cT" secondAttribute="trailing" id="F46-pg-2lh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CpV-AV-myL" secondAttribute="trailing" constant="51" id="PWy-Mn-bfl"/>
+                            <constraint firstItem="L3h-uU-9cT" firstAttribute="top" secondItem="Qju-40-aYR" secondAttribute="bottom" constant="32" id="VEx-iJ-Zdi"/>
+                            <constraint firstItem="uki-Bz-Egl" firstAttribute="top" secondItem="L3h-uU-9cT" secondAttribute="bottom" constant="81" id="Y0j-3J-COV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qju-40-aYR" secondAttribute="trailing" constant="51" id="h5I-TB-xoE"/>
+                            <constraint firstItem="uki-Bz-Egl" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="92" id="kcV-xo-qiN"/>
+                            <constraint firstItem="Qju-40-aYR" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="51" id="qPd-CA-9hO"/>
+                            <constraint firstAttribute="trailing" secondItem="VOi-qc-v5I" secondAttribute="trailing" id="rZb-Lz-HeD"/>
+                            <constraint firstItem="CpV-AV-myL" firstAttribute="top" secondItem="VOi-qc-v5I" secondAttribute="bottom" constant="94" id="vpu-YO-eQd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="i2Z-2f-Val"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iqd-wc-fRj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-63" y="84"/>
+            <point key="canvasLocation" x="-63.200000000000003" y="83.208395802098963"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="Badge" width="130" height="138"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                navigationController.navigationBar.isHidden = true
 //                window?.rootViewController = navigationController
 //                window?.makeKeyAndVisible()
-        let viewController = LoginRouter.createModule()
+        let viewController = LoginRouter.setUpModule()
         let navigationController = UINavigationController(rootViewController: viewController ?? UIViewController())
-        navigationController.navigationBar.isHidden = false
+//        navigationController.navigationBar.isHidden = false
 //        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

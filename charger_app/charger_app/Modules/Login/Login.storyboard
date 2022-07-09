@@ -25,21 +25,25 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-POSTA ADRESİNİZ" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xa8-iG-tGb" userLabel="Email TextField">
-                                <rect key="frame" x="80" y="387" width="254" height="34"/>
+                                <rect key="frame" x="45" y="387" width="324" height="34"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bod-87-VpC">
+                                <rect key="frame" x="0.0" y="33" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0QB-iB-1co"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="V01-od-bAP" firstAttribute="top" secondItem="Xa8-iG-tGb" secondAttribute="bottom" constant="103" id="DmU-l0-All"/>
-                            <constraint firstItem="0QB-iB-1co" firstAttribute="trailing" secondItem="Xa8-iG-tGb" secondAttribute="trailing" constant="80" id="JaG-yY-tGz"/>
                             <constraint firstItem="Xa8-iG-tGb" firstAttribute="top" secondItem="0QB-iB-1co" secondAttribute="top" constant="343" id="LGn-ux-bc7"/>
                             <constraint firstItem="V01-od-bAP" firstAttribute="leading" secondItem="0QB-iB-1co" secondAttribute="leading" constant="150" id="PLh-Jj-cOw"/>
+                            <constraint firstItem="Xa8-iG-tGb" firstAttribute="leading" secondItem="0QB-iB-1co" secondAttribute="leading" constant="45" id="U7d-p0-jHz"/>
                             <constraint firstItem="0QB-iB-1co" firstAttribute="trailing" secondItem="V01-od-bAP" secondAttribute="trailing" constant="150" id="nUq-t4-bnL"/>
-                            <constraint firstItem="Xa8-iG-tGb" firstAttribute="leading" secondItem="0QB-iB-1co" secondAttribute="leading" constant="80" id="nfy-cv-hkg"/>
+                            <constraint firstItem="0QB-iB-1co" firstAttribute="trailing" secondItem="Xa8-iG-tGb" secondAttribute="trailing" constant="45" id="vox-sP-huT"/>
                         </constraints>
                     </view>
                     <connections>
@@ -48,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="94"/>
+            <point key="canvasLocation" x="77" y="23"/>
         </scene>
     </scenes>
     <resources>

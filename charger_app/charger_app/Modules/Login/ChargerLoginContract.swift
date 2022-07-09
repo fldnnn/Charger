@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
  
 protocol LoginViewProtocol: AnyObject {
      
@@ -15,10 +16,13 @@ protocol LoginViewProtocol: AnyObject {
  
 protocol LoginInteractorProtocol: AnyObject {
      
-//    var presenter: Login.Presenter? { get set }
-    var output: Login.InteractorToPresenter? { get set }
+    var presenter: Login.Presenter? { get set }
+//    var output: Login.InteractorToPresenter? { get set }
     
     func postRequest(UserDict: [String: Any])
+     
+    func verifyLocationPermission()
+    func getUserLocation()
 }
  
 protocol LoginPresenterProtocol: AnyObject {
@@ -30,10 +34,14 @@ protocol LoginPresenterProtocol: AnyObject {
     func didDataFetch()
     func didUserPressLoginButton()
     func getUserInfo(with UserDict: [String: Any])
+     
+    func viewDidAppear()
 }
 
 protocol LoginInteractorToPresenterProtocol: AnyObject {
+     
     func userLoggedIn(with userId: Int)
+    
 }
  
 protocol LoginEntityProtocol: AnyObject {
@@ -43,10 +51,7 @@ protocol LoginEntityProtocol: AnyObject {
 protocol LoginRouterProtocol: AnyObject {
      
     var presenter: Login.Presenter? { get set }
-//    func startPage()
-      
-  
-//    func navigateToReservationPage(with name: String)
+
     func navigateToBooking(with userId: Int)
 }
  

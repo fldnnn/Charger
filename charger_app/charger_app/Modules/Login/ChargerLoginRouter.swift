@@ -11,13 +11,8 @@ class LoginRouter {
     
     var presenter: Login.Presenter?
     weak var vc: UIViewController?
-//    func startPage() {
-//        if var vc = Login.createModule() {
-//            vc.present(vc, animated: true)
-//        }
-//    }
     
-    static func createModule() -> LoginViewController? {
+    static func setUpModule() -> LoginViewController? {
         if let view = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Login") as? LoginViewController {
             let presenter = LoginPresenter()
             let interactor = LoginInteractor()

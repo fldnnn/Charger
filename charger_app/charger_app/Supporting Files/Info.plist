@@ -31,5 +31,9 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>App needs location.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App needs location.</string>
 </dict>
 </plist>

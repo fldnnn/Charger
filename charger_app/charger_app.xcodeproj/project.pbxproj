@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */; };
 		3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */; };
-		3117D5602873351B00FBF010 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55F2873351B00FBF010 /* LoginHelper.swift */; };
 		3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */; };
 		311D78AB2874B82D0092B75B /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311D78AA2874B82D0092B75B /* UITextField+Ext.swift */; };
 		311D78AD2874B8620092B75B /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311D78AC2874B8620092B75B /* UIColor+Ext.swift */; };
@@ -33,6 +32,7 @@
 		31961161287079DA0068F5C3 /* charger_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31961160287079DA0068F5C3 /* charger_appUITests.swift */; };
 		31961163287079DA0068F5C3 /* charger_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31961162287079DA0068F5C3 /* charger_appUITestsLaunchTests.swift */; };
 		3196117028707DEB0068F5C3 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3196116F28707DEB0068F5C3 /* String+Ext.swift */; };
+		31DB5FD22877566100BDCC95 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DB5FD12877566100BDCC95 /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 /* Begin PBXFileReference section */
 		3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginPresenter.swift; sourceTree = "<group>"; };
 		3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginInteractor.swift; sourceTree = "<group>"; };
-		3117D55F2873351B00FBF010 /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginRouter.swift; sourceTree = "<group>"; };
 		311D78AA2874B82D0092B75B /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 		311D78AC2874B8620092B75B /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		31961160287079DA0068F5C3 /* charger_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charger_appUITests.swift; sourceTree = "<group>"; };
 		31961162287079DA0068F5C3 /* charger_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charger_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3196116F28707DEB0068F5C3 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		31DB5FD12877566100BDCC95 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				3196113F287079D50068F5C3 /* AppDelegate.swift */,
+				31961141287079D50068F5C3 /* SceneDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -161,8 +162,8 @@
 				311D78BA2874C9D80092B75B /* BookingContract.swift */,
 				311D78BD2874C9D80092B75B /* BookingViewController.swift */,
 				311D78BB2874C9D80092B75B /* BookingPresenter.swift */,
-				311D78BC2874C9D80092B75B /* BookingRouter.swift */,
 				311D78BE2874C9D80092B75B /* BookingInteractor.swift */,
+				311D78BC2874C9D80092B75B /* BookingRouter.swift */,
 			);
 			path = Booking;
 			sourceTree = "<group>";
@@ -184,9 +185,8 @@
 				3130DE1C287221CB0077A4FB /* ChargerLoginContract.swift */,
 				31961143287079D50068F5C3 /* ChargerLoginViewController.swift */,
 				3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */,
-				3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */,
 				3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */,
-				3117D55F2873351B00FBF010 /* LoginHelper.swift */,
+				3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -214,12 +214,12 @@
 		3196113E287079D50068F5C3 /* charger_app */ = {
 			isa = PBXGroup;
 			children = (
+				31DB5FD02877563F00BDCC95 /* Services */,
 				311D78B42874C1D20092B75B /* Application */,
 				311D78B32874C18A0092B75B /* Supporting Files */,
 				311D78B22874C1860092B75B /* Resources */,
 				311D78A92874B80E0092B75B /* Extensions */,
 				3130DE1A2872217D0077A4FB /* Modules */,
-				31961141287079D50068F5C3 /* SceneDelegate.swift */,
 				31961145287079D50068F5C3 /* Main.storyboard */,
 			);
 			path = charger_app;
@@ -240,6 +240,14 @@
 				31961162287079DA0068F5C3 /* charger_appUITestsLaunchTests.swift */,
 			);
 			path = charger_appUITests;
+			sourceTree = "<group>";
+		};
+		31DB5FD02877563F00BDCC95 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				31DB5FD12877566100BDCC95 /* LocationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,11 +389,11 @@
 				311D78C02874C9D80092B75B /* BookingContract.swift in Sources */,
 				3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */,
 				31961140287079D50068F5C3 /* AppDelegate.swift in Sources */,
+				31DB5FD22877566100BDCC95 /* LocationService.swift in Sources */,
 				311D78AD2874B8620092B75B /* UIColor+Ext.swift in Sources */,
 				3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */,
 				3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */,
 				3130DE1D287221CB0077A4FB /* ChargerLoginContract.swift in Sources */,
-				3117D5602873351B00FBF010 /* LoginHelper.swift in Sources */,
 				31961142287079D50068F5C3 /* SceneDelegate.swift in Sources */,
 				311D78C42874C9D80092B75B /* BookingInteractor.swift in Sources */,
 				311D78C12874C9D80092B75B /* BookingPresenter.swift in Sources */,

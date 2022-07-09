@@ -6,28 +6,29 @@
 //
 
 import Foundation
+import CoreLocation
  
 class LoginPresenter: Login.Presenter {
     
     weak var view: Login.View?
-    
     var interactor: Login.Interactor!
-    
     var router: Login.Router!
-     
     
     func didDataFetch() {
         
     }
     
     func didUserPressLoginButton() {
-//        interactor.postRequest()
-// if postRequest() doesnt't work, it shouldn't navigate. Add function.
-//        router.startPage()
+        
     }
+    
     func getUserInfo(with UserDict: [String : Any]) {
         interactor?.postRequest(UserDict: UserDict)
         print(UserDict)
+    }
+    
+    func viewDidAppear() {
+        interactor.verifyLocationPermission()
     }
 }
 
