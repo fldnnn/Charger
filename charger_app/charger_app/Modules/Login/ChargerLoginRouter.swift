@@ -10,9 +10,9 @@ import UIKit
 class LoginRouter {
     
     var presenter: Login.Presenter?
-    weak var vc: UIViewController?
+    weak var vC: UIViewController?
     
-    static func setUpModule() -> LoginViewController? {
+    static func createModule() -> LoginViewController? {
         if let view = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Login") as? LoginViewController {
             let presenter = LoginPresenter()
             let interactor = LoginInteractor()
@@ -25,7 +25,7 @@ class LoginRouter {
 //            interactor.presenter = presenter
             interactor.output = presenter
             router.presenter = presenter
-            router.vc = view
+            router.vC = view
         
             return view
         }
@@ -36,6 +36,6 @@ class LoginRouter {
 extension LoginRouter: LoginRouterProtocol {
     func navigateToBooking(with userId: Int) {
         let bookingVC = BookingRouter.createModule(userId: userId) ?? UIViewController()
-        vc?.navigationController?.pushViewController(bookingVC, animated: true)
+        vC?.navigationController?.pushViewController(bookingVC, animated: true)
     }
 }

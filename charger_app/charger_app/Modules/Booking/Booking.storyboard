@@ -22,7 +22,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOi-qc-v5I">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="vr0-hd-4r6"/>
+                                    <navigationItem title="Randevular" id="vr0-hd-4r6">
+                                        <barButtonItem key="leftBarButtonItem" image="Users" id="4yv-ot-slW" userLabel="Profile Button Item">
+                                            <connections>
+                                                <action selector="onProfileButtonPressed:" destination="d8s-zC-T2t" id="30F-fv-iK5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Badge" translatesAutoresizingMaskIntoConstraints="NO" id="CpV-AV-myL">
@@ -73,6 +79,7 @@
     </scenes>
     <resources>
         <image name="Badge" width="130" height="138"/>
+        <image name="Users" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

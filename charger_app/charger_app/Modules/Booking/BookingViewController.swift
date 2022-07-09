@@ -17,6 +17,10 @@ class BookingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    @IBAction private func onProfileButtonPressed(_ sender: Any) {
+        presenter?.onProfileButtonPressed()
+    }
 }
 
 extension BookingViewController: Booking.View {

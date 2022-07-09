@@ -12,7 +12,7 @@ class BookingRouter {
 
     // MARK: - Properties
     var presenter: Booking.Presenter?
-    weak var view: UIViewController?
+    weak var vC: UIViewController?
 
     // MARK: - Static methods
     static func createModule(userId: Int) -> BookingViewController? {
@@ -28,6 +28,7 @@ class BookingRouter {
             presenter.interactor = interactor
             interactor.output = presenter
             router.presenter = presenter
+            router.vC = view
             return view
         }
         return nil
@@ -35,5 +36,9 @@ class BookingRouter {
 }
 
 extension BookingRouter: Booking.Router {
-
+     
+    func navigateToProfile() {
+        let profileVC = ProfileRouter.createModule() ?? UIViewController()
+        vC?.navigationController?.pushViewController(profileVC, animated: true)
+    }
 }

@@ -18,7 +18,9 @@ class BookingPresenter {
 }
 
 extension BookingPresenter: BookingPresenterProtocol {
-    
+    func onProfileButtonPressed() {
+        router?.navigateToProfile()
+    }
 }
 
 extension BookingPresenter: BookingInteractorToPresenter {

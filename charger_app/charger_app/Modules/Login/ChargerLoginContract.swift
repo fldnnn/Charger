@@ -42,10 +42,6 @@ protocol LoginInteractorToPresenterProtocol: AnyObject {
     func userLoggedIn(with userId: Int)
     
 }
- 
-protocol LoginEntityProtocol: AnyObject {
-    
-}
 
 protocol LoginRouterProtocol: AnyObject {
      
@@ -59,6 +55,5 @@ struct Login {
     typealias Interactor = LoginInteractorProtocol
     typealias InteractorToPresenter = LoginInteractorToPresenterProtocol
     typealias Presenter = LoginPresenterProtocol
-    typealias Entity = LoginEntityProtocol
     typealias Router = LoginRouterProtocol
 }
