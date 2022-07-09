@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CoreLocation
  
 protocol LoginViewProtocol: AnyObject {
      
@@ -17,7 +16,7 @@ protocol LoginViewProtocol: AnyObject {
 protocol LoginInteractorProtocol: AnyObject {
      
     var presenter: Login.Presenter? { get set }
-//    var output: Login.InteractorToPresenter? { get set }
+    var output: Login.InteractorToPresenter? { get set }
     
     func postRequest(UserDict: [String: Any])
      
