@@ -16,6 +16,8 @@ class BookingViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.setGradientBackground()
+        navigationController?.navigationBar.isHidden = true
     }
 
     @IBAction private func onProfileButtonPressed(_ sender: Any) {
