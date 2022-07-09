@@ -8,23 +8,18 @@
 import Foundation
  
 protocol LoginViewProtocol: AnyObject {
-     
     var presenter: Login.Presenter! { get set }
-     
 }
  
 protocol LoginInteractorProtocol: AnyObject {
-     
     var output: Login.InteractorToPresenter? { get set }
-    
+
     func postRequest(UserDict: [String: Any])
-     
     func verifyLocationPermission()
     func getUserLocation()
 }
  
 protocol LoginPresenterProtocol: AnyObject {
-    
     var view: Login.View? { get set }
     var interactor: Login.Interactor! { get set }
     var router: Login.Router! { get set }
@@ -32,18 +27,14 @@ protocol LoginPresenterProtocol: AnyObject {
     func didDataFetch()
     func didUserPressLoginButton()
     func getUserInfo(with UserDict: [String: Any])
-     
     func viewDidAppear()
 }
 
 protocol LoginInteractorToPresenterProtocol: AnyObject {
-     
     func userLoggedIn(with userId: Int)
-    
 }
 
 protocol LoginRouterProtocol: AnyObject {
-     
     var presenter: Login.Presenter? { get set }
 
     func navigateToBooking(with userId: Int)

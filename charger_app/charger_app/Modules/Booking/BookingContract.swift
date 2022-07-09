@@ -9,16 +9,20 @@
 import Foundation
 
 protocol BookingViewProtocol: AnyObject {
-    
+    var presenter: Booking.Presenter! { get set }
 }
 
 protocol BookingPresenterProtocol: AnyObject {
+    var view: Booking.View? { get set }
+    var interactor: Booking.Interactor! { get set }
+    var router: Booking.Router! { get set }
+
     func onProfileButtonPressed()
     func onCreateBookingButtonPressed()
 }
 
 protocol BookingInteractorProtocol: AnyObject {
-   
+    var output: Booking.InteractorToPresenter? { get set }
 }
 
 protocol BookingInteractorToPresenter: AnyObject {
@@ -26,6 +30,8 @@ protocol BookingInteractorToPresenter: AnyObject {
 }
 
 protocol BookingRouterProtocol: AnyObject {
+    var presenter: Booking.Presenter? { get set }
+
     func navigateToProfile()
     func navigateToCitySelection()
 }
@@ -35,6 +41,5 @@ struct Booking {
     typealias Interactor = BookingInteractorProtocol
     typealias InteractorToPresenter = BookingInteractorToPresenter
     typealias Presenter = BookingPresenterProtocol
-//    typealias Entity = LoginEntityProtocol
     typealias Router = BookingRouterProtocol
 }

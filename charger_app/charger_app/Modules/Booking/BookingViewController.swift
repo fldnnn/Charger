@@ -11,7 +11,7 @@ import UIKit
 class BookingViewController: UIViewController {
 
     // MARK: - Properties
-    var presenter: BookingPresenter?
+    var presenter: Booking.Presenter!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {

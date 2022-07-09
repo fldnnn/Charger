@@ -11,7 +11,6 @@ import Foundation
 class ProfileInteractor {
 
     // MARK: - Properties
-    var presenter: Profile.Presenter?
     weak var output: Profile.InteractorToPresenter?
 
 }

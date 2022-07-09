@@ -20,9 +20,11 @@ class CitySelectionRouter {
             let presenter = CitySelectionPresenter()
             let interactor = CitySelectionInteractor()
             let router = CitySelectionRouter()
+            let adapter = CitySelectionTableViewAdapter(presenter: presenter)
 
             view.presenter = presenter
             view.modalPresentationStyle = .fullScreen
+            view.adapter = adapter
 
             presenter.view = view
             presenter.interactor = interactor

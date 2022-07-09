@@ -34,7 +34,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
      
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+    
         presenter.viewDidAppear()
     }
 

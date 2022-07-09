@@ -16,11 +16,9 @@ protocol ProfilePresenterProtocol: AnyObject {
     var view: Profile.View? { get set }
     var interactor: Profile.Interactor! { get set }
     var router: Profile.Router! { get set }
-    
 }
 
 protocol ProfileInteractorProtocol: AnyObject {
-    var presenter: Profile.Presenter? { get set }
     var output: Profile.InteractorToPresenter? { get set }
 }
 

@@ -15,5 +15,4 @@ class BookingInteractor {
 }
 
 extension BookingInteractor: Booking.Interactor {
-
 }

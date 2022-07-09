@@ -11,14 +11,13 @@ import Foundation
 class BookingPresenter {
 
     // MARK: - Properties
-    weak var view: BookingViewController?
-    var router: BookingRouter?
-    var interactor: BookingInteractor?
+    weak var view: Booking.View?
+    var router: Booking.Router!
+    var interactor: Booking.Interactor!
     var userId: Int?
 }
 
 extension BookingPresenter: BookingPresenterProtocol {
-    
     func onProfileButtonPressed() {
         router?.navigateToProfile()
     }

@@ -19,6 +19,9 @@
 		3117B04F2879E06300565384 /* CitySelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B0492879E06300565384 /* CitySelectionRouter.swift */; };
 		3117B0502879E06300565384 /* CitySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B04A2879E06300565384 /* CitySelectionViewController.swift */; };
 		3117B0512879E06300565384 /* CitySelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B04B2879E06300565384 /* CitySelectionInteractor.swift */; };
+		3117B05D287A0C2A00565384 /* CitySelectionTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B05C287A0C2A00565384 /* CitySelectionTableViewAdapter.swift */; };
+		3117B061287A0DBA00565384 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B05F287A0DBA00565384 /* CityTableViewCell.swift */; };
+		3117B062287A0DBA00565384 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3117B060287A0DBA00565384 /* CityTableViewCell.xib */; };
 		3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */; };
 		3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */; };
 		3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */; };
@@ -77,6 +80,9 @@
 		3117B0492879E06300565384 /* CitySelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionRouter.swift; sourceTree = "<group>"; };
 		3117B04A2879E06300565384 /* CitySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionViewController.swift; sourceTree = "<group>"; };
 		3117B04B2879E06300565384 /* CitySelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionInteractor.swift; sourceTree = "<group>"; };
+		3117B05C287A0C2A00565384 /* CitySelectionTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionTableViewAdapter.swift; sourceTree = "<group>"; };
+		3117B05F287A0DBA00565384 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		3117B060287A0DBA00565384 /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 		3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginPresenter.swift; sourceTree = "<group>"; };
 		3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginInteractor.swift; sourceTree = "<group>"; };
 		3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginRouter.swift; sourceTree = "<group>"; };
@@ -150,6 +156,8 @@
 		3117B0452879E04500565384 /* CitySelection */ = {
 			isa = PBXGroup;
 			children = (
+				3117B05E287A0D9D00565384 /* Cell */,
+				3117B05B287A0C0400565384 /* CitySelectionTableViewAdapter */,
 				3117B0462879E06300565384 /* CitySelection.storyboard */,
 				3117B0472879E06300565384 /* CitySelectionContract.swift */,
 				3117B0482879E06300565384 /* CitySelectionPresenter.swift */,
@@ -158,6 +166,23 @@
 				3117B04B2879E06300565384 /* CitySelectionInteractor.swift */,
 			);
 			path = CitySelection;
+			sourceTree = "<group>";
+		};
+		3117B05B287A0C0400565384 /* CitySelectionTableViewAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				3117B05C287A0C2A00565384 /* CitySelectionTableViewAdapter.swift */,
+			);
+			path = CitySelectionTableViewAdapter;
+			sourceTree = "<group>";
+		};
+		3117B05E287A0D9D00565384 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3117B05F287A0DBA00565384 /* CityTableViewCell.swift */,
+				3117B060287A0DBA00565384 /* CityTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		311D78A92874B80E0092B75B /* Extensions */ = {
@@ -408,6 +433,7 @@
 			files = (
 				3117B04C2879E06300565384 /* CitySelection.storyboard in Resources */,
 				3117B03E2879D9A300565384 /* Profile.storyboard in Resources */,
+				3117B062287A0DBA00565384 /* CityTableViewCell.xib in Resources */,
 				3196114C287079D90068F5C3 /* LaunchScreen.storyboard in Resources */,
 				311D78BF2874C9D80092B75B /* Booking.storyboard in Resources */,
 				31961149287079D90068F5C3 /* Assets.xcassets in Resources */,
@@ -442,12 +468,14 @@
 				31961144287079D50068F5C3 /* ChargerLoginViewController.swift in Sources */,
 				311D78B72874C7D20092B75B /* LoginResponse.swift in Sources */,
 				311D78C02874C9D80092B75B /* BookingContract.swift in Sources */,
+				3117B05D287A0C2A00565384 /* CitySelectionTableViewAdapter.swift in Sources */,
 				3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */,
 				3117B0512879E06300565384 /* CitySelectionInteractor.swift in Sources */,
 				3117B03F2879D9A300565384 /* ProfileContract.swift in Sources */,
 				3117B0422879D9A300565384 /* ProfileViewController.swift in Sources */,
 				3117B0412879D9A300565384 /* ProfileRouter.swift in Sources */,
 				31961140287079D50068F5C3 /* AppDelegate.swift in Sources */,
+				3117B061287A0DBA00565384 /* CityTableViewCell.swift in Sources */,
 				31DB5FD22877566100BDCC95 /* LocationService.swift in Sources */,
 				3117B0432879D9A300565384 /* ProfileInteractor.swift in Sources */,
 				3117B04D2879E06300565384 /* CitySelectionContract.swift in Sources */,

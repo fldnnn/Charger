@@ -26,8 +26,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ci-Sm-8Af">
-                                <rect key="frame" x="0.0" y="51" width="375" height="616"/>
+                                <rect key="frame" x="16" y="56" width="343" height="611"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -35,9 +36,9 @@
                             <constraint firstItem="TkL-LW-diJ" firstAttribute="top" secondItem="wT6-ai-9nW" secondAttribute="bottom" id="2tk-Bv-ga7"/>
                             <constraint firstAttribute="bottom" secondItem="9Ci-Sm-8Af" secondAttribute="bottom" id="78a-3Y-lYA"/>
                             <constraint firstItem="TkL-LW-diJ" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leading" constant="20" id="FHD-p1-qtZ"/>
-                            <constraint firstItem="9Ci-Sm-8Af" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="-16" id="Jr6-Of-2o8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Ci-Sm-8Af" secondAttribute="trailing" constant="-16" id="Qal-bM-pDe"/>
-                            <constraint firstItem="9Ci-Sm-8Af" firstAttribute="top" secondItem="TkL-LW-diJ" secondAttribute="bottom" id="t2Z-na-Lp3"/>
+                            <constraint firstItem="9Ci-Sm-8Af" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" id="Jr6-Of-2o8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Ci-Sm-8Af" secondAttribute="trailing" id="Qal-bM-pDe"/>
+                            <constraint firstItem="9Ci-Sm-8Af" firstAttribute="top" secondItem="TkL-LW-diJ" secondAttribute="bottom" constant="5" id="t2Z-na-Lp3"/>
                             <constraint firstAttribute="trailing" secondItem="TkL-LW-diJ" secondAttribute="trailing" constant="20" id="xpt-AX-hnh"/>
                         </constraints>
                     </view>

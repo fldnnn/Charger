@@ -15,16 +15,27 @@ class CitySelectionViewController: UIViewController {
     
     // MARK: - Properties
     var presenter: CitySelection.Presenter!
+    var adapter: CitySelectionTableViewAdapter?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad()
         title = "Şehir Seçiniz"
         navigationController?.navigationBar.isHidden = false
         view.setGradientBackground()
+        prepareTableView()
+    }
+    
+    private func prepareTableView() {
+        cityTableView.delegate = adapter
+        cityTableView.dataSource = adapter
+        cityTableView.register(UINib(nibName: "CityTableViewCell", bundle: nil), forCellReuseIdentifier: "CityTableViewCell")
     }
 }
 
 extension CitySelectionViewController: CitySelectionViewProtocol {
-    // TODO: implement view output methods
+    func reloadTableView() {
+        cityTableView.reloadData()
+    }
 }

@@ -14,12 +14,22 @@ class CitySelectionPresenter {
     weak var view: CitySelection.View?
     var router: CitySelection.Router!
     var interactor: CitySelection.Interactor!
+    private var cityList: [String]?
 }
 
 extension CitySelectionPresenter: CitySelectionPresenterProtocol {
-    // TODO: implement presentation methods
+    func viewDidLoad() {
+        interactor?.fetchCityList()
+    }
+    
+    func getCityList() -> [String] {
+        cityList ?? []
+    }
 }
 
 extension CitySelectionPresenter: CitySelectionInteractorToPresenterProtocol {
-    // TODO: implement interactor output methods
+    func citiesFetched(_ cityList: [String]) {
+        self.cityList = cityList
+        view?.reloadTableView()
+    }
 }

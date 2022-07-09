@@ -10,6 +10,8 @@ import Foundation
 
 protocol CitySelectionViewProtocol: AnyObject {
     var presenter: CitySelection.Presenter! { get set }
+    
+    func reloadTableView()
 }
 
 protocol CitySelectionPresenterProtocol: AnyObject {
@@ -17,14 +19,18 @@ protocol CitySelectionPresenterProtocol: AnyObject {
     var interactor: CitySelection.Interactor! { get set }
     var router: CitySelection.Router! { get set }
     
+    func viewDidLoad()
+    func getCityList() -> [String]
 }
 
 protocol CitySelectionInteractorProtocol: AnyObject {
-    var presenter: CitySelection.Presenter? { get set }
     var output: CitySelection.InteractorToPresenter? { get set }
+    
+    func fetchCityList()
 }
 
 protocol CitySelectionInteractorToPresenterProtocol: AnyObject {
+    func citiesFetched(_ cityList: [String])
 }
 
 protocol CitySelectionRouterProtocol: AnyObject {
