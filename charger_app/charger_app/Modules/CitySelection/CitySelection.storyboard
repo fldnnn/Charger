@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d8s-zC-T2t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d8s-zC-T2t">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--module Name View Controller-->
+        <!--City Selection View Controller-->
         <scene sceneID="4e3-xv-bDR">
             <objects>
-                <viewController storyboardIdentifier="CitySelection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d8s-zC-T2t" customClass="CitySelectionViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CitySelection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d8s-zC-T2t" customClass="CitySelectionViewController" customModule="charger_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wT6-ai-9nW"/>
                         <viewControllerLayoutGuide type="bottom" id="Fue-mU-seb"/>
@@ -18,24 +20,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CitySelection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="508-5s-Q5C">
-                                <rect key="frame" x="74" y="323" width="227.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <color key="highlightedColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TkL-LW-diJ">
+                                <rect key="frame" x="20" y="0.0" width="335" height="51"/>
+                                <color key="backgroundColor" name="dark"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ci-Sm-8Af">
+                                <rect key="frame" x="0.0" y="51" width="375" height="616"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="508-5s-Q5C" firstAttribute="centerX" secondItem="IFj-I9-EFs" secondAttribute="centerX" id="lQu-vz-lDb"/>
-                            <constraint firstItem="508-5s-Q5C" firstAttribute="centerY" secondItem="IFj-I9-EFs" secondAttribute="centerY" id="nqG-Xh-c1c"/>
+                            <constraint firstItem="TkL-LW-diJ" firstAttribute="top" secondItem="wT6-ai-9nW" secondAttribute="bottom" id="2tk-Bv-ga7"/>
+                            <constraint firstAttribute="bottom" secondItem="9Ci-Sm-8Af" secondAttribute="bottom" id="78a-3Y-lYA"/>
+                            <constraint firstItem="TkL-LW-diJ" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leading" constant="20" id="FHD-p1-qtZ"/>
+                            <constraint firstItem="9Ci-Sm-8Af" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="-16" id="Jr6-Of-2o8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Ci-Sm-8Af" secondAttribute="trailing" constant="-16" id="Qal-bM-pDe"/>
+                            <constraint firstItem="9Ci-Sm-8Af" firstAttribute="top" secondItem="TkL-LW-diJ" secondAttribute="bottom" id="t2Z-na-Lp3"/>
+                            <constraint firstAttribute="trailing" secondItem="TkL-LW-diJ" secondAttribute="trailing" constant="20" id="xpt-AX-hnh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i2Z-2f-Val"/>
+                    <connections>
+                        <outlet property="citySearchBar" destination="TkL-LW-diJ" id="vhq-Kd-jZk"/>
+                        <outlet property="cityTableView" destination="9Ci-Sm-8Af" id="ObH-l4-ZNN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iqd-wc-fRj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-63" y="84"/>
+            <point key="canvasLocation" x="-63.200000000000003" y="83.208395802098963"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="dark">
+            <color red="0.10199999809265137" green="0.11800000071525574" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

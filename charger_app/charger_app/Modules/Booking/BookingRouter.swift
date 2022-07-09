@@ -20,13 +20,17 @@ class BookingRouter {
             let presenter = BookingPresenter()
             let interactor = BookingInteractor()
             let router = BookingRouter()
+            
             view.presenter = presenter
             view.modalPresentationStyle = .fullScreen
+            
             presenter.view = view
             presenter.userId = userId
-            //presenter.router = router
+            presenter.router = router
             presenter.interactor = interactor
+            
             interactor.output = presenter
+            
             router.presenter = presenter
             router.vC = view
             return view

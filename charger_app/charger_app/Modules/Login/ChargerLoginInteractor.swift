@@ -9,8 +9,7 @@ import Foundation
 import CoreLocation
  
 class LoginInteractor: Login.Interactor {
-    
-    var presenter: Login.Presenter?
+
     weak var output: Login.InteractorToPresenter?
     let locationService = LocationService()
     private var location: CLLocationCoordinate2D?

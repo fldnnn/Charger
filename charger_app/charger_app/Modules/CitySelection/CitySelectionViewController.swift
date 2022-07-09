@@ -10,12 +10,18 @@ import UIKit
 
 class CitySelectionViewController: UIViewController {
 
+    @IBOutlet private weak var cityTableView: UITableView!
+    @IBOutlet private weak var citySearchBar: UISearchBar!
+    
     // MARK: - Properties
     var presenter: CitySelection.Presenter!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Şehir Seçiniz"
+        navigationController?.navigationBar.isHidden = false
+        view.setGradientBackground()
     }
 }
 

@@ -22,7 +22,7 @@ class LoginRouter {
             presenter.view = view
             presenter.interactor = interactor
             presenter.router = router
-//            interactor.presenter = presenter
+
             interactor.output = presenter
             router.presenter = presenter
             router.vC = view
