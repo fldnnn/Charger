@@ -43,7 +43,7 @@ extension CitySelectionViewController: CitySelectionViewProtocol {
 
 extension CitySelectionViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if !searchBar.text.isEmpty {
+        if searchBar.text != "" {
             presenter?.filterCities(with: searchBar.text ?? "")
         }
     }
