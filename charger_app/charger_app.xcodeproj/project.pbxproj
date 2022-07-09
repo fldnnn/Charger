@@ -13,6 +13,12 @@
 		3117B0412879D9A300565384 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B03B2879D9A300565384 /* ProfileRouter.swift */; };
 		3117B0422879D9A300565384 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B03C2879D9A300565384 /* ProfileViewController.swift */; };
 		3117B0432879D9A300565384 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B03D2879D9A300565384 /* ProfileInteractor.swift */; };
+		3117B04C2879E06300565384 /* CitySelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3117B0462879E06300565384 /* CitySelection.storyboard */; };
+		3117B04D2879E06300565384 /* CitySelectionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B0472879E06300565384 /* CitySelectionContract.swift */; };
+		3117B04E2879E06300565384 /* CitySelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B0482879E06300565384 /* CitySelectionPresenter.swift */; };
+		3117B04F2879E06300565384 /* CitySelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B0492879E06300565384 /* CitySelectionRouter.swift */; };
+		3117B0502879E06300565384 /* CitySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B04A2879E06300565384 /* CitySelectionViewController.swift */; };
+		3117B0512879E06300565384 /* CitySelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B04B2879E06300565384 /* CitySelectionInteractor.swift */; };
 		3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */; };
 		3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */; };
 		3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */; };
@@ -65,6 +71,12 @@
 		3117B03B2879D9A300565384 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		3117B03C2879D9A300565384 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3117B03D2879D9A300565384 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		3117B0462879E06300565384 /* CitySelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CitySelection.storyboard; sourceTree = "<group>"; };
+		3117B0472879E06300565384 /* CitySelectionContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionContract.swift; sourceTree = "<group>"; };
+		3117B0482879E06300565384 /* CitySelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionPresenter.swift; sourceTree = "<group>"; };
+		3117B0492879E06300565384 /* CitySelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionRouter.swift; sourceTree = "<group>"; };
+		3117B04A2879E06300565384 /* CitySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionViewController.swift; sourceTree = "<group>"; };
+		3117B04B2879E06300565384 /* CitySelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionInteractor.swift; sourceTree = "<group>"; };
 		3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginPresenter.swift; sourceTree = "<group>"; };
 		3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginInteractor.swift; sourceTree = "<group>"; };
 		3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginRouter.swift; sourceTree = "<group>"; };
@@ -135,6 +147,19 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		3117B0452879E04500565384 /* CitySelection */ = {
+			isa = PBXGroup;
+			children = (
+				3117B0462879E06300565384 /* CitySelection.storyboard */,
+				3117B0472879E06300565384 /* CitySelectionContract.swift */,
+				3117B0482879E06300565384 /* CitySelectionPresenter.swift */,
+				3117B0492879E06300565384 /* CitySelectionRouter.swift */,
+				3117B04A2879E06300565384 /* CitySelectionViewController.swift */,
+				3117B04B2879E06300565384 /* CitySelectionInteractor.swift */,
+			);
+			path = CitySelection;
+			sourceTree = "<group>";
+		};
 		311D78A92874B80E0092B75B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +221,7 @@
 		3130DE1A2872217D0077A4FB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3117B0452879E04500565384 /* CitySelection */,
 				3117AFEF2879D40F00565384 /* Profile */,
 				311D78B82874C9B70092B75B /* Booking */,
 				3130DE1B287221A90077A4FB /* Login */,
@@ -380,6 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3117B04C2879E06300565384 /* CitySelection.storyboard in Resources */,
 				3117B03E2879D9A300565384 /* Profile.storyboard in Resources */,
 				3196114C287079D90068F5C3 /* LaunchScreen.storyboard in Resources */,
 				311D78BF2874C9D80092B75B /* Booking.storyboard in Resources */,
@@ -411,24 +438,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				311D78AB2874B82D0092B75B /* UITextField+Ext.swift in Sources */,
+				3117B04E2879E06300565384 /* CitySelectionPresenter.swift in Sources */,
 				31961144287079D50068F5C3 /* ChargerLoginViewController.swift in Sources */,
 				311D78B72874C7D20092B75B /* LoginResponse.swift in Sources */,
 				311D78C02874C9D80092B75B /* BookingContract.swift in Sources */,
 				3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */,
+				3117B0512879E06300565384 /* CitySelectionInteractor.swift in Sources */,
 				3117B03F2879D9A300565384 /* ProfileContract.swift in Sources */,
 				3117B0422879D9A300565384 /* ProfileViewController.swift in Sources */,
 				3117B0412879D9A300565384 /* ProfileRouter.swift in Sources */,
 				31961140287079D50068F5C3 /* AppDelegate.swift in Sources */,
 				31DB5FD22877566100BDCC95 /* LocationService.swift in Sources */,
 				3117B0432879D9A300565384 /* ProfileInteractor.swift in Sources */,
+				3117B04D2879E06300565384 /* CitySelectionContract.swift in Sources */,
 				311D78AD2874B8620092B75B /* UIColor+Ext.swift in Sources */,
 				3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */,
 				3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */,
 				3130DE1D287221CB0077A4FB /* ChargerLoginContract.swift in Sources */,
 				31961142287079D50068F5C3 /* SceneDelegate.swift in Sources */,
+				3117B04F2879E06300565384 /* CitySelectionRouter.swift in Sources */,
 				311D78C42874C9D80092B75B /* BookingInteractor.swift in Sources */,
 				311D78C12874C9D80092B75B /* BookingPresenter.swift in Sources */,
 				311D78C62874D5D70092B75B /* UIView+Ext.swift in Sources */,
+				3117B0502879E06300565384 /* CitySelectionViewController.swift in Sources */,
 				311D78C22874C9D80092B75B /* BookingRouter.swift in Sources */,
 				311D78C32874C9D80092B75B /* BookingViewController.swift in Sources */,
 				3117B0402879D9A300565384 /* ProfilePresenter.swift in Sources */,

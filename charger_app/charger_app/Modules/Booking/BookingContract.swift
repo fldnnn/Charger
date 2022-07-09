@@ -14,6 +14,7 @@ protocol BookingViewProtocol: AnyObject {
 
 protocol BookingPresenterProtocol: AnyObject {
     func onProfileButtonPressed()
+    func onCreateBookingButtonPressed()
 }
 
 protocol BookingInteractorProtocol: AnyObject {
@@ -26,6 +27,7 @@ protocol BookingInteractorToPresenter: AnyObject {
 
 protocol BookingRouterProtocol: AnyObject {
     func navigateToProfile()
+    func navigateToCitySelection()
 }
 
 struct Booking {

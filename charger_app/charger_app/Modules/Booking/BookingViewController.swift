@@ -23,6 +23,10 @@ class BookingViewController: UIViewController {
     @IBAction private func onProfileButtonPressed(_ sender: Any) {
         presenter?.onProfileButtonPressed()
     }
+    
+    @IBAction private func onCreateBookingButtonPressed() {
+        presenter?.onCreateBookingButtonPressed()
+    }
 }
 
 extension BookingViewController: Booking.View {

@@ -41,4 +41,9 @@ extension BookingRouter: Booking.Router {
         let profileVC = ProfileRouter.createModule() ?? UIViewController()
         vC?.navigationController?.pushViewController(profileVC, animated: true)
     }
+     
+    func navigateToCitySelection() {
+        let citySelectionVC = CitySelectionRouter.createModule() ?? UIViewController()
+        vC?.navigationController?.pushViewController(citySelectionVC, animated: true)
+    }
 }

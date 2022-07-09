@@ -56,6 +56,9 @@
                                 <rect key="frame" x="108" y="518.5" width="159" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="RANDEVU OLUŞTUR"/>
+                                <connections>
+                                    <action selector="onCreateBookingButtonPressed" destination="d8s-zC-T2t" eventType="touchUpInside" id="yAG-9d-Rfa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
