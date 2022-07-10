@@ -61,9 +61,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
              
             postDict["deviceUDID"] = uuid
 
-            presenter?.getUserInfo(with: postDict)
-            print(postDict)
-        
+            presenter?.getUserInfo(with: postDict)        
             presenter?.didUserPressLoginButton()
         }
     }

@@ -24,7 +24,6 @@ class LoginPresenter: Login.Presenter {
     
     func getUserInfo(with UserDict: [String : Any]) {
         interactor?.postRequest(UserDict: UserDict)
-        print(UserDict)
     }
     
     func viewDidAppear() {

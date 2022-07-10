@@ -54,7 +54,6 @@ class LocationService: NSObject {
         case .authorizedWhenInUse:
             completion(true)
             locationManager.startUpdatingLocation()
-            print("whenınuse")
         @unknown default:
             break
         }
@@ -77,7 +76,6 @@ extension LocationService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         locationDatas?(location.coordinate)
-//        print(location)
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)

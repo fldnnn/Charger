@@ -75,13 +75,6 @@ class LoginInteractor: Login.Interactor {
                     UserDefaults.standard.set(jsonResponse.userId, forKey: "userId")
                     UserDefaults.standard.set(jsonResponse.email, forKey: "email")
                 }
-//              if let jsonResponse = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as? [String: Any] {
-//                print(jsonResponse)
-//                // handle json response
-//              } else {
-//                print("data maybe corrupted or in wrong format")
-//                throw URLError(.badServerResponse)
-//              }
             } catch let error {
               print(error.localizedDescription)
             }
