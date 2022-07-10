@@ -28,6 +28,8 @@
 		3117B073287B27BD00565384 /* StationSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B06D287B27BD00565384 /* StationSelectionRouter.swift */; };
 		3117B074287B27BD00565384 /* StationSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B06E287B27BD00565384 /* StationSelectionViewController.swift */; };
 		3117B075287B27BD00565384 /* StationSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B06F287B27BD00565384 /* StationSelectionInteractor.swift */; };
+		3117B07A287B30B300565384 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B078287B30B300565384 /* StationTableViewCell.swift */; };
+		3117B07B287B30B300565384 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3117B079287B30B300565384 /* StationTableViewCell.xib */; };
 		3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */; };
 		3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */; };
 		3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */; };
@@ -95,6 +97,8 @@
 		3117B06D287B27BD00565384 /* StationSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionRouter.swift; sourceTree = "<group>"; };
 		3117B06E287B27BD00565384 /* StationSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionViewController.swift; sourceTree = "<group>"; };
 		3117B06F287B27BD00565384 /* StationSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionInteractor.swift; sourceTree = "<group>"; };
+		3117B078287B30B300565384 /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
+		3117B079287B30B300565384 /* StationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
 		3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginPresenter.swift; sourceTree = "<group>"; };
 		3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginInteractor.swift; sourceTree = "<group>"; };
 		3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginRouter.swift; sourceTree = "<group>"; };
@@ -168,7 +172,6 @@
 		3117B0452879E04500565384 /* CitySelection */ = {
 			isa = PBXGroup;
 			children = (
-				3117B05E287A0D9D00565384 /* Cell */,
 				3117B05B287A0C0400565384 /* CitySelectionTableViewAdapter */,
 				3117B0462879E06300565384 /* CitySelection.storyboard */,
 				3117B0472879E06300565384 /* CitySelectionContract.swift */,
@@ -183,6 +186,7 @@
 		3117B05B287A0C0400565384 /* CitySelectionTableViewAdapter */ = {
 			isa = PBXGroup;
 			children = (
+				3117B05E287A0D9D00565384 /* Cell */,
 				3117B05C287A0C2A00565384 /* CitySelectionTableViewAdapter.swift */,
 			);
 			path = CitySelectionTableViewAdapter;
@@ -200,6 +204,7 @@
 		3117B069287B27A400565384 /* StationSelection */ = {
 			isa = PBXGroup;
 			children = (
+				3117B076287B2F4600565384 /* StationSelecetionTableViewAdapter */,
 				3117B06A287B27BD00565384 /* StationSelection.storyboard */,
 				3117B06B287B27BD00565384 /* StationSelectionContract.swift */,
 				3117B06C287B27BD00565384 /* StationSelectionPresenter.swift */,
@@ -208,6 +213,23 @@
 				3117B06F287B27BD00565384 /* StationSelectionInteractor.swift */,
 			);
 			path = StationSelection;
+			sourceTree = "<group>";
+		};
+		3117B076287B2F4600565384 /* StationSelecetionTableViewAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				3117B077287B309300565384 /* Cell */,
+			);
+			path = StationSelecetionTableViewAdapter;
+			sourceTree = "<group>";
+		};
+		3117B077287B309300565384 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3117B078287B30B300565384 /* StationTableViewCell.swift */,
+				3117B079287B30B300565384 /* StationTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		311D78A92874B80E0092B75B /* Extensions */ = {
@@ -459,6 +481,7 @@
 			files = (
 				3117B04C2879E06300565384 /* CitySelection.storyboard in Resources */,
 				3117B03E2879D9A300565384 /* Profile.storyboard in Resources */,
+				3117B07B287B30B300565384 /* StationTableViewCell.xib in Resources */,
 				3117B062287A0DBA00565384 /* CityTableViewCell.xib in Resources */,
 				3196114C287079D90068F5C3 /* LaunchScreen.storyboard in Resources */,
 				311D78BF2874C9D80092B75B /* Booking.storyboard in Resources */,
@@ -504,6 +527,7 @@
 				3117B0422879D9A300565384 /* ProfileViewController.swift in Sources */,
 				3117B0412879D9A300565384 /* ProfileRouter.swift in Sources */,
 				31961140287079D50068F5C3 /* AppDelegate.swift in Sources */,
+				3117B07A287B30B300565384 /* StationTableViewCell.swift in Sources */,
 				3117B061287A0DBA00565384 /* CityTableViewCell.swift in Sources */,
 				31DB5FD22877566100BDCC95 /* LocationService.swift in Sources */,
 				3117B0432879D9A300565384 /* ProfileInteractor.swift in Sources */,
