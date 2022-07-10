@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d8s-zC-T2t">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -17,27 +17,57 @@
                         <viewControllerLayoutGuide type="bottom" id="Fue-mU-seb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IFj-I9-EFs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TkL-LW-diJ">
-                                <rect key="frame" x="20" y="0.0" width="335" height="51"/>
+                                <rect key="frame" x="20" y="44" width="350" height="51"/>
                                 <color key="backgroundColor" name="dark"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ci-Sm-8Af">
-                                <rect key="frame" x="16" y="56" width="343" height="611"/>
+                                <rect key="frame" x="16" y="100" width="358" height="744"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKf-jP-WJ2">
+                                <rect key="frame" x="0.0" y="95" width="390" height="749"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aramanızla eşleşen bir sonuç bulunamadı." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQy-Go-Azn">
+                                        <rect key="frame" x="10" y="299.66666666666669" width="338" height="55"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen yeni bir arama yapın." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VH-R3-gX7">
+                                        <rect key="frame" x="10" y="369.66666666666669" width="338" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="grey_scale"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="1VH-R3-gX7" firstAttribute="leading" secondItem="YKf-jP-WJ2" secondAttribute="leading" constant="10" id="18t-mR-1ek"/>
+                                    <constraint firstAttribute="trailing" secondItem="1VH-R3-gX7" secondAttribute="trailing" constant="42" id="3t2-uN-SAb"/>
+                                    <constraint firstItem="yQy-Go-Azn" firstAttribute="leading" secondItem="YKf-jP-WJ2" secondAttribute="leading" constant="10" id="N8g-Om-J5k"/>
+                                    <constraint firstAttribute="trailing" secondItem="yQy-Go-Azn" secondAttribute="trailing" constant="42" id="XzL-82-Yat"/>
+                                    <constraint firstItem="1VH-R3-gX7" firstAttribute="top" secondItem="yQy-Go-Azn" secondAttribute="bottom" constant="15" id="h31-8L-d1l"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="yQy-Go-Azn" firstAttribute="centerY" secondItem="IFj-I9-EFs" secondAttribute="centerY" id="0VQ-61-ysH"/>
                             <constraint firstItem="TkL-LW-diJ" firstAttribute="top" secondItem="wT6-ai-9nW" secondAttribute="bottom" id="2tk-Bv-ga7"/>
+                            <constraint firstItem="YKf-jP-WJ2" firstAttribute="top" secondItem="TkL-LW-diJ" secondAttribute="bottom" id="6C7-ef-zUd"/>
                             <constraint firstAttribute="bottom" secondItem="9Ci-Sm-8Af" secondAttribute="bottom" id="78a-3Y-lYA"/>
                             <constraint firstItem="TkL-LW-diJ" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leading" constant="20" id="FHD-p1-qtZ"/>
                             <constraint firstItem="9Ci-Sm-8Af" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" id="Jr6-Of-2o8"/>
+                            <constraint firstItem="YKf-jP-WJ2" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leading" id="PUN-1N-0am"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Ci-Sm-8Af" secondAttribute="trailing" id="Qal-bM-pDe"/>
+                            <constraint firstAttribute="trailing" secondItem="YKf-jP-WJ2" secondAttribute="trailing" id="Qfs-Ll-ODL"/>
+                            <constraint firstAttribute="bottom" secondItem="YKf-jP-WJ2" secondAttribute="bottom" id="Z9o-80-gpb"/>
                             <constraint firstItem="9Ci-Sm-8Af" firstAttribute="top" secondItem="TkL-LW-diJ" secondAttribute="bottom" constant="5" id="t2Z-na-Lp3"/>
                             <constraint firstAttribute="trailing" secondItem="TkL-LW-diJ" secondAttribute="trailing" constant="20" id="xpt-AX-hnh"/>
                         </constraints>
@@ -46,6 +76,7 @@
                     <connections>
                         <outlet property="citySearchBar" destination="TkL-LW-diJ" id="vhq-Kd-jZk"/>
                         <outlet property="cityTableView" destination="9Ci-Sm-8Af" id="ObH-l4-ZNN"/>
+                        <outlet property="emptyStateView" destination="YKf-jP-WJ2" id="y7m-rU-lTF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iqd-wc-fRj" sceneMemberID="firstResponder"/>
@@ -56,6 +87,9 @@
     <resources>
         <namedColor name="dark">
             <color red="0.10199999809265137" green="0.11800000071525574" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grey_scale">
+            <color red="0.71799999475479126" green="0.74099999666213989" blue="0.79600000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

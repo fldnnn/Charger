@@ -12,6 +12,7 @@ class CitySelectionViewController: UIViewController {
 
     @IBOutlet private weak var cityTableView: UITableView!
     @IBOutlet private weak var citySearchBar: UISearchBar!
+    @IBOutlet private weak var emptyStateView: UIView!
     
     // MARK: - Properties
     var presenter: CitySelection.Presenter!
@@ -24,6 +25,7 @@ class CitySelectionViewController: UIViewController {
         title = "Şehir Seçiniz"
         navigationController?.navigationBar.isHidden = false
         view.setGradientBackground()
+        emptyStateView.setGradientBackground()
         prepareTableView()
         citySearchBar.delegate = self
     }
@@ -39,12 +41,14 @@ extension CitySelectionViewController: CitySelectionViewProtocol {
     func reloadTableView() {
         cityTableView.reloadData()
     }
+     
+    func changeEmptyStateVisibility(to isVisible: Bool) {
+        emptyStateView.isHidden = isVisible
+    }
 }
 
 extension CitySelectionViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if searchBar.text != "" {
-            presenter?.filterCities(with: searchBar.text ?? "")
-        }
+        presenter?.filterCities(with: searchBar.text ?? "")
     }
 }

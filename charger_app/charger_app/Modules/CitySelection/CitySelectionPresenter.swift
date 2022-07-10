@@ -29,6 +29,7 @@ extension CitySelectionPresenter: CitySelectionPresenterProtocol {
     
     func filterCities(with searchTerm: String) {
         filteredCities = cityList?.filter({ $0.contains(searchTerm) })
+        view?.changeEmptyStateVisibility(to: !(filteredCities?.isEmpty ?? false))
         view?.reloadTableView()
     }
 }

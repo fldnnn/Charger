@@ -12,6 +12,7 @@ protocol CitySelectionViewProtocol: AnyObject {
     var presenter: CitySelection.Presenter! { get set }
     
     func reloadTableView()
+    func changeEmptyStateVisibility(to isVisible: Bool)
 }
 
 protocol CitySelectionPresenterProtocol: AnyObject {
