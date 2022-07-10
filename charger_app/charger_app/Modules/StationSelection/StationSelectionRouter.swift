@@ -15,7 +15,7 @@ class StationSelectionRouter {
     weak var vC: UIViewController?
 
     // MARK: - Static methods
-    static func createModule() -> StationSelectionViewController? {
+    static func createModule(with cityName: String) -> StationSelectionViewController? {
         if let view = UIStoryboard(name: "StationSelection", bundle: nil).instantiateViewController(withIdentifier: "StationSelection") as? StationSelectionViewController {
             let presenter = StationSelectionPresenter()
             let interactor = StationSelectionInteractor()
@@ -27,6 +27,7 @@ class StationSelectionRouter {
             presenter.view = view
             presenter.interactor = interactor
             presenter.router = router
+            presenter.cityName = cityName
 
             interactor.output = presenter
 

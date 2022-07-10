@@ -23,6 +23,7 @@ protocol CitySelectionPresenterProtocol: AnyObject {
     func viewDidLoad()
     func getCityList() -> [String]
     func filterCities(with searchTerm: String)
+    func onCityCellPressed(with cityName: String)
 }
 
 protocol CitySelectionInteractorProtocol: AnyObject {
@@ -37,6 +38,8 @@ protocol CitySelectionInteractorToPresenterProtocol: AnyObject {
 
 protocol CitySelectionRouterProtocol: AnyObject {
     var presenter: CitySelection.Presenter? { get set }
+     
+    func navigateToStationSelection(with cityName: String)
 }
 
 struct CitySelection {

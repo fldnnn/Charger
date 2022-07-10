@@ -260,10 +260,10 @@
 			children = (
 				311D78B92874C9D80092B75B /* Booking.storyboard */,
 				311D78BA2874C9D80092B75B /* BookingContract.swift */,
-				311D78BD2874C9D80092B75B /* BookingViewController.swift */,
 				311D78BB2874C9D80092B75B /* BookingPresenter.swift */,
-				311D78BE2874C9D80092B75B /* BookingInteractor.swift */,
 				311D78BC2874C9D80092B75B /* BookingRouter.swift */,
+				311D78BD2874C9D80092B75B /* BookingViewController.swift */,
+				311D78BE2874C9D80092B75B /* BookingInteractor.swift */,
 			);
 			path = Booking;
 			sourceTree = "<group>";

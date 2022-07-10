@@ -32,6 +32,10 @@ extension CitySelectionPresenter: CitySelectionPresenterProtocol {
         view?.changeEmptyStateVisibility(to: !(filteredCities?.isEmpty ?? false))
         view?.reloadTableView()
     }
+    
+    func onCityCellPressed(with cityName: String) {
+        router?.navigateToStationSelection(with: cityName)
+    }
 }
 
 extension CitySelectionPresenter: CitySelectionInteractorToPresenterProtocol {

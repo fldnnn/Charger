@@ -42,5 +42,8 @@ class CitySelectionRouter {
 }
 
 extension CitySelectionRouter: CitySelectionRouterProtocol {
-    // TODO: Implement wireframe methods
+    func navigateToStationSelection(with cityName: String) {
+        let stationSelectionVC = StationSelectionRouter.createModule(with: cityName) ?? UIViewController()
+        vC?.navigationController?.pushViewController(stationSelectionVC, animated: true)
+    }
 }

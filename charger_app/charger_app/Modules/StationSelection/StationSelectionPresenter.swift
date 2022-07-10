@@ -14,6 +14,7 @@ class StationSelectionPresenter {
     weak var view: StationSelection.View?
     var router: StationSelection.Router!
     var interactor: StationSelection.Interactor!
+    var cityName: String?
 }
 
 extension StationSelectionPresenter: StationSelectionPresenterProtocol {

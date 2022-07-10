@@ -46,6 +46,10 @@ extension CitySelectionTableViewAdapter: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         setupCityTableViewCell(tableView: tableView, indexPath: indexPath)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.onCityCellPressed(with: getCityList()[indexPath.row])
+    }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         50.0
