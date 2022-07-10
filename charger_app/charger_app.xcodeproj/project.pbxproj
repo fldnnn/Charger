@@ -22,6 +22,12 @@
 		3117B05D287A0C2A00565384 /* CitySelectionTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B05C287A0C2A00565384 /* CitySelectionTableViewAdapter.swift */; };
 		3117B061287A0DBA00565384 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B05F287A0DBA00565384 /* CityTableViewCell.swift */; };
 		3117B062287A0DBA00565384 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3117B060287A0DBA00565384 /* CityTableViewCell.xib */; };
+		3117B070287B27BD00565384 /* StationSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3117B06A287B27BD00565384 /* StationSelection.storyboard */; };
+		3117B071287B27BD00565384 /* StationSelectionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B06B287B27BD00565384 /* StationSelectionContract.swift */; };
+		3117B072287B27BD00565384 /* StationSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B06C287B27BD00565384 /* StationSelectionPresenter.swift */; };
+		3117B073287B27BD00565384 /* StationSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B06D287B27BD00565384 /* StationSelectionRouter.swift */; };
+		3117B074287B27BD00565384 /* StationSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B06E287B27BD00565384 /* StationSelectionViewController.swift */; };
+		3117B075287B27BD00565384 /* StationSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B06F287B27BD00565384 /* StationSelectionInteractor.swift */; };
 		3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */; };
 		3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */; };
 		3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */; };
@@ -83,6 +89,12 @@
 		3117B05C287A0C2A00565384 /* CitySelectionTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionTableViewAdapter.swift; sourceTree = "<group>"; };
 		3117B05F287A0DBA00565384 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		3117B060287A0DBA00565384 /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
+		3117B06A287B27BD00565384 /* StationSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StationSelection.storyboard; sourceTree = "<group>"; };
+		3117B06B287B27BD00565384 /* StationSelectionContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionContract.swift; sourceTree = "<group>"; };
+		3117B06C287B27BD00565384 /* StationSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionPresenter.swift; sourceTree = "<group>"; };
+		3117B06D287B27BD00565384 /* StationSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionRouter.swift; sourceTree = "<group>"; };
+		3117B06E287B27BD00565384 /* StationSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionViewController.swift; sourceTree = "<group>"; };
+		3117B06F287B27BD00565384 /* StationSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionInteractor.swift; sourceTree = "<group>"; };
 		3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginPresenter.swift; sourceTree = "<group>"; };
 		3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginInteractor.swift; sourceTree = "<group>"; };
 		3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginRouter.swift; sourceTree = "<group>"; };
@@ -185,6 +197,19 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		3117B069287B27A400565384 /* StationSelection */ = {
+			isa = PBXGroup;
+			children = (
+				3117B06A287B27BD00565384 /* StationSelection.storyboard */,
+				3117B06B287B27BD00565384 /* StationSelectionContract.swift */,
+				3117B06C287B27BD00565384 /* StationSelectionPresenter.swift */,
+				3117B06D287B27BD00565384 /* StationSelectionRouter.swift */,
+				3117B06E287B27BD00565384 /* StationSelectionViewController.swift */,
+				3117B06F287B27BD00565384 /* StationSelectionInteractor.swift */,
+			);
+			path = StationSelection;
+			sourceTree = "<group>";
+		};
 		311D78A92874B80E0092B75B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +271,7 @@
 		3130DE1A2872217D0077A4FB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3117B069287B27A400565384 /* StationSelection */,
 				3117B0452879E04500565384 /* CitySelection */,
 				3117AFEF2879D40F00565384 /* Profile */,
 				311D78B82874C9B70092B75B /* Booking */,
@@ -436,6 +462,7 @@
 				3117B062287A0DBA00565384 /* CityTableViewCell.xib in Resources */,
 				3196114C287079D90068F5C3 /* LaunchScreen.storyboard in Resources */,
 				311D78BF2874C9D80092B75B /* Booking.storyboard in Resources */,
+				3117B070287B27BD00565384 /* StationSelection.storyboard in Resources */,
 				31961149287079D90068F5C3 /* Assets.xcassets in Resources */,
 				31961147287079D50068F5C3 /* Main.storyboard in Resources */,
 				311D78B12874BE770092B75B /* Login.storyboard in Resources */,
@@ -471,7 +498,9 @@
 				3117B05D287A0C2A00565384 /* CitySelectionTableViewAdapter.swift in Sources */,
 				3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */,
 				3117B0512879E06300565384 /* CitySelectionInteractor.swift in Sources */,
+				3117B074287B27BD00565384 /* StationSelectionViewController.swift in Sources */,
 				3117B03F2879D9A300565384 /* ProfileContract.swift in Sources */,
+				3117B071287B27BD00565384 /* StationSelectionContract.swift in Sources */,
 				3117B0422879D9A300565384 /* ProfileViewController.swift in Sources */,
 				3117B0412879D9A300565384 /* ProfileRouter.swift in Sources */,
 				31961140287079D50068F5C3 /* AppDelegate.swift in Sources */,
@@ -480,14 +509,17 @@
 				3117B0432879D9A300565384 /* ProfileInteractor.swift in Sources */,
 				3117B04D2879E06300565384 /* CitySelectionContract.swift in Sources */,
 				311D78AD2874B8620092B75B /* UIColor+Ext.swift in Sources */,
+				3117B075287B27BD00565384 /* StationSelectionInteractor.swift in Sources */,
 				3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */,
 				3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */,
 				3130DE1D287221CB0077A4FB /* ChargerLoginContract.swift in Sources */,
 				31961142287079D50068F5C3 /* SceneDelegate.swift in Sources */,
 				3117B04F2879E06300565384 /* CitySelectionRouter.swift in Sources */,
 				311D78C42874C9D80092B75B /* BookingInteractor.swift in Sources */,
+				3117B073287B27BD00565384 /* StationSelectionRouter.swift in Sources */,
 				311D78C12874C9D80092B75B /* BookingPresenter.swift in Sources */,
 				311D78C62874D5D70092B75B /* UIView+Ext.swift in Sources */,
+				3117B072287B27BD00565384 /* StationSelectionPresenter.swift in Sources */,
 				3117B0502879E06300565384 /* CitySelectionViewController.swift in Sources */,
 				311D78C22874C9D80092B75B /* BookingRouter.swift in Sources */,
 				311D78C32874C9D80092B75B /* BookingViewController.swift in Sources */,
