@@ -15,12 +15,26 @@ class StationSelectionPresenter {
     var router: StationSelection.Router!
     var interactor: StationSelection.Interactor!
     var cityName: String?
+    private var stationList: [Station]?
 }
 
 extension StationSelectionPresenter: StationSelectionPresenterProtocol {
-    // TODO: implement presentation methods
+    func viewDidLoad() {
+        interactor?.fetchStationList()
+    }
+    
+    func getStationList() -> [Station] {
+        stationList ?? []
+    }
+    
+    func onStationCellPressed(with: Station) {
+        // TODO: navigate to booking date selection
+    }
 }
 
 extension StationSelectionPresenter: StationSelectionInteractorToPresenterProtocol {
-    // TODO: implement interactor output methods
+    func stationsFetched(_ stationResponse: [Station]) {
+        stationList = stationResponse
+        view?.reloadTableView()
+    }
 }

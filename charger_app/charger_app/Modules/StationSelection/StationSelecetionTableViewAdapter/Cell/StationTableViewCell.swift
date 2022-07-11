@@ -13,4 +13,10 @@ class StationTableViewCell: UITableViewCell {
     @IBOutlet private weak var distanceLabel: UILabel!
     @IBOutlet private weak var stationNameLabel: UILabel!
     @IBOutlet private weak var stationTypeImageView: UIImageView!
+    
+    func setup(with station: Station) {
+        socketNumberLabel.text = "\(String(describing: station.socketCount))"
+        distanceLabel.text = "\(String(describing: station.distanceInKM))"
+        // TODO: set name
+    }
 }

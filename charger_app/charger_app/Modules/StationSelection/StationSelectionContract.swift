@@ -10,6 +10,8 @@ import Foundation
 
 protocol StationSelectionViewProtocol: AnyObject {
     var presenter: StationSelection.Presenter! { get set }
+    
+    func reloadTableView()
 }
 
 protocol StationSelectionPresenterProtocol: AnyObject {
@@ -17,13 +19,19 @@ protocol StationSelectionPresenterProtocol: AnyObject {
     var interactor: StationSelection.Interactor! { get set }
     var router: StationSelection.Router! { get set }
     
+    func viewDidLoad()
+    func getStationList() -> [Station]
+    func onStationCellPressed(with station: Station)
 }
 
 protocol StationSelectionInteractorProtocol: AnyObject {
     var output: StationSelection.InteractorToPresenter? { get set }
+    
+    func fetchStationList()
 }
 
 protocol StationSelectionInteractorToPresenterProtocol: AnyObject {
+    func stationsFetched(_ stationResponse: [Station])
 }
 
 protocol StationSelectionRouterProtocol: AnyObject {

@@ -20,8 +20,10 @@ class StationSelectionRouter {
             let presenter = StationSelectionPresenter()
             let interactor = StationSelectionInteractor()
             let router = StationSelectionRouter()
+            let adapter = StationSelectionTableViewAdapter(presenter: presenter)
 
             view.presenter = presenter
+            view.adapter = adapter
             view.modalPresentationStyle = .fullScreen
 
             presenter.view = view
