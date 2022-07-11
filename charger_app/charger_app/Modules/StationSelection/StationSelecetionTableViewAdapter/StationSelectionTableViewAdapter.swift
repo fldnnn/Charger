@@ -49,9 +49,5 @@ extension StationSelectionTableViewAdapter: UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.onStationCellPressed(with: getStationList()[indexPath.row])
     }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        50.0
-    }
 }
 

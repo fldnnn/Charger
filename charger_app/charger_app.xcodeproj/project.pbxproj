@@ -32,6 +32,7 @@
 		3117B07B287B30B300565384 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3117B079287B30B300565384 /* StationTableViewCell.xib */; };
 		3117B07D287C54A600565384 /* StationSelectionTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B07C287C54A600565384 /* StationSelectionTableViewAdapter.swift */; };
 		3117B080287C583000565384 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B07F287C583000565384 /* Station.swift */; };
+		3117B082287C683A00565384 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B081287C683A00565384 /* Double+Ext.swift */; };
 		3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */; };
 		3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */; };
 		3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */; };
@@ -103,6 +104,7 @@
 		3117B079287B30B300565384 /* StationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
 		3117B07C287C54A600565384 /* StationSelectionTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionTableViewAdapter.swift; sourceTree = "<group>"; };
 		3117B07F287C583000565384 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		3117B081287C683A00565384 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginPresenter.swift; sourceTree = "<group>"; };
 		3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginInteractor.swift; sourceTree = "<group>"; };
 		3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginRouter.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				311D78AA2874B82D0092B75B /* UITextField+Ext.swift */,
 				311D78AC2874B8620092B75B /* UIColor+Ext.swift */,
 				311D78C52874D5D70092B75B /* UIView+Ext.swift */,
+				3117B081287C683A00565384 /* Double+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 			files = (
 				311D78AB2874B82D0092B75B /* UITextField+Ext.swift in Sources */,
 				3117B04E2879E06300565384 /* CitySelectionPresenter.swift in Sources */,
+				3117B082287C683A00565384 /* Double+Ext.swift in Sources */,
 				31961144287079D50068F5C3 /* ChargerLoginViewController.swift in Sources */,
 				311D78B72874C7D20092B75B /* LoginResponse.swift in Sources */,
 				311D78C02874C9D80092B75B /* BookingContract.swift in Sources */,

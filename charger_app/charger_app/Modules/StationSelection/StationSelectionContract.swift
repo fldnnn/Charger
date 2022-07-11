@@ -12,6 +12,7 @@ protocol StationSelectionViewProtocol: AnyObject {
     var presenter: StationSelection.Presenter! { get set }
     
     func reloadTableView()
+    func updateUI(with cityName: String, _ stationCount: Int)
 }
 
 protocol StationSelectionPresenterProtocol: AnyObject {

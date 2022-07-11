@@ -36,4 +36,9 @@ extension StationSelectionViewController: StationSelectionViewProtocol {
     func reloadTableView() {
         stationTableView.reloadData()
     }
+    
+    func updateUI(with cityName: String, _ stationCount: Int) {
+        stationSearchBar.text = cityName
+        searchResultLabel.text = "'\(cityName)' şehri için \(stationCount) sonuç gösteriliyor."
+    }
 }

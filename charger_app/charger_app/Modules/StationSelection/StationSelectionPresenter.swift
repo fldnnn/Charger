@@ -35,6 +35,7 @@ extension StationSelectionPresenter: StationSelectionPresenterProtocol {
 extension StationSelectionPresenter: StationSelectionInteractorToPresenterProtocol {
     func stationsFetched(_ stationResponse: [Station]) {
         stationList = stationResponse
+        view?.updateUI(with: cityName ?? "", stationResponse.count)
         view?.reloadTableView()
     }
 }
