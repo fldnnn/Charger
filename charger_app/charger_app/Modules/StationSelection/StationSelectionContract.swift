@@ -13,6 +13,7 @@ protocol StationSelectionViewProtocol: AnyObject {
     
     func reloadTableView()
     func updateUI(with cityName: String, _ stationCount: Int)
+    func changeEmptyStateVisibility(to isVisible: Bool)
 }
 
 protocol StationSelectionPresenterProtocol: AnyObject {
@@ -23,6 +24,7 @@ protocol StationSelectionPresenterProtocol: AnyObject {
     func viewDidLoad()
     func getFilteredStationList() -> [Station]
     func onStationCellPressed(with station: Station)
+    func filterStations(with searchTerm: String)
 }
 
 protocol StationSelectionInteractorProtocol: AnyObject {

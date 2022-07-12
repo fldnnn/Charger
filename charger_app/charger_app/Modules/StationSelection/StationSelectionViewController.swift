@@ -12,6 +12,7 @@ class StationSelectionViewController: UIViewController {
     @IBOutlet private weak var stationSearchBar: UISearchBar!
     @IBOutlet private weak var searchResultLabel: UILabel!
     @IBOutlet private weak var stationTableView: UITableView!
+    @IBOutlet private weak var emptyStateView: UIView!
     
     // MARK: - Properties
     var presenter: StationSelection.Presenter!
@@ -22,7 +23,9 @@ class StationSelectionViewController: UIViewController {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         view.setGradientBackground()
+        navigationController?.navigationBar.isHidden = false
         prepareTableView()
+        stationSearchBar.delegate = self
     }
     
     private func prepareTableView() {
@@ -40,5 +43,15 @@ extension StationSelectionViewController: StationSelectionViewProtocol {
     func updateUI(with cityName: String, _ stationCount: Int) {
         stationSearchBar.text = cityName
         searchResultLabel.text = "'\(cityName)' şehri için \(stationCount) sonuç gösteriliyor."
+    }
+    
+    func changeEmptyStateVisibility(to isVisible: Bool) {
+        emptyStateView.isHidden = isVisible
+    }
+}
+
+extension StationSelectionViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        presenter?.filterStations(with: searchBar.text ?? "")
     }
 }

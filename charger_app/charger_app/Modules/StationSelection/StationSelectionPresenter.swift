@@ -16,7 +16,8 @@ class StationSelectionPresenter {
     var interactor: StationSelection.Interactor!
     var cityName: String?
     private var allStations: [Station]?
-    private var filteredStations: [Station]?
+    private var filteredStationsByCityName: [Station]?
+    private var filteredStationsByStationName: [Station]?
 }
 
 extension StationSelectionPresenter: StationSelectionPresenterProtocol {
@@ -25,7 +26,7 @@ extension StationSelectionPresenter: StationSelectionPresenterProtocol {
     }
     
     func getFilteredStationList() -> [Station] {
-        filteredStations ?? []
+        filteredStationsByStationName ?? []
     }
     
     func onStationCellPressed(with: Station) {
@@ -40,8 +41,20 @@ extension StationSelectionPresenter: StationSelectionInteractorToPresenterProtoc
     }
     
     func stationDetailsFetched(_ stationDetailsResponse: [Station]) {
-        filteredStations = stationDetailsResponse
-        view?.updateUI(with: cityName ?? "", filteredStations?.count ?? 0)
+        filteredStationsByCityName = stationDetailsResponse
+        filteredStationsByStationName = filteredStationsByCityName
+        view?.updateUI(with: cityName ?? "", filteredStationsByCityName?.count ?? 0)
+        view?.reloadTableView()
+    }
+    
+    func filterStations(with searchTerm: String) {
+        filteredStationsByStationName = filteredStationsByCityName?.filter({
+            if let stationName = $0.stationName {
+                return stationName.contains(searchTerm)
+            }
+            return false
+        })
+        view?.changeEmptyStateVisibility(to: !(filteredStationsByStationName?.isEmpty ?? false))
         view?.reloadTableView()
     }
 }
