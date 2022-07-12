@@ -5,7 +5,7 @@
 //  Created by Fulden Onan on 4.07.2022.
 //
 
-import Foundation
+import UIKit
 import CoreLocation
  
 class LoginInteractor: Login.Interactor {
@@ -69,7 +69,6 @@ class LoginInteractor: Login.Interactor {
 
                 DispatchQueue.main.async {
                     self.output?.userLoggedIn(with: jsonResponse.userId ?? 0)
-                    
                     // keychain e eklenecek
                     UserDefaults.standard.set(jsonResponse.token, forKey: "token")
                     UserDefaults.standard.set(jsonResponse.userId, forKey: "userId")

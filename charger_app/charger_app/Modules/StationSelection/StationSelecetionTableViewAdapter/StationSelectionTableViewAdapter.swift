@@ -31,7 +31,7 @@ extension StationSelectionTableViewAdapter {
     }
 
     func getStationList() -> [Station] {
-        presenter.getStationList()
+        presenter.getFilteredStationList()
     }
 }
 

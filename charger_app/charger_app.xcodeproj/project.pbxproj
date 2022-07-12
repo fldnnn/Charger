@@ -33,6 +33,8 @@
 		3117B07D287C54A600565384 /* StationSelectionTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B07C287C54A600565384 /* StationSelectionTableViewAdapter.swift */; };
 		3117B080287C583000565384 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B07F287C583000565384 /* Station.swift */; };
 		3117B082287C683A00565384 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B081287C683A00565384 /* Double+Ext.swift */; };
+		3117B084287C709300565384 /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B083287C709300565384 /* StationDetail.swift */; };
+		3117B086287C7EE500565384 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B085287C7EE500565384 /* Date+Ext.swift */; };
 		3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */; };
 		3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */; };
 		3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */; };
@@ -105,6 +107,8 @@
 		3117B07C287C54A600565384 /* StationSelectionTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionTableViewAdapter.swift; sourceTree = "<group>"; };
 		3117B07F287C583000565384 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		3117B081287C683A00565384 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
+		3117B083287C709300565384 /* StationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetail.swift; sourceTree = "<group>"; };
+		3117B085287C7EE500565384 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginPresenter.swift; sourceTree = "<group>"; };
 		3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginInteractor.swift; sourceTree = "<group>"; };
 		3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginRouter.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				3117B07F287C583000565384 /* Station.swift */,
+				3117B083287C709300565384 /* StationDetail.swift */,
 			);
 			path = ResponseClass;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				311D78AC2874B8620092B75B /* UIColor+Ext.swift */,
 				311D78C52874D5D70092B75B /* UIView+Ext.swift */,
 				3117B081287C683A00565384 /* Double+Ext.swift */,
+				3117B085287C7EE500565384 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -542,6 +548,7 @@
 				3117B074287B27BD00565384 /* StationSelectionViewController.swift in Sources */,
 				3117B03F2879D9A300565384 /* ProfileContract.swift in Sources */,
 				3117B07D287C54A600565384 /* StationSelectionTableViewAdapter.swift in Sources */,
+				3117B086287C7EE500565384 /* Date+Ext.swift in Sources */,
 				3117B071287B27BD00565384 /* StationSelectionContract.swift in Sources */,
 				3117B0422879D9A300565384 /* ProfileViewController.swift in Sources */,
 				3117B0412879D9A300565384 /* ProfileRouter.swift in Sources */,
@@ -557,6 +564,7 @@
 				3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */,
 				3130DE1D287221CB0077A4FB /* ChargerLoginContract.swift in Sources */,
 				31961142287079D50068F5C3 /* SceneDelegate.swift in Sources */,
+				3117B084287C709300565384 /* StationDetail.swift in Sources */,
 				3117B04F2879E06300565384 /* CitySelectionRouter.swift in Sources */,
 				311D78C42874C9D80092B75B /* BookingInteractor.swift in Sources */,
 				3117B073287B27BD00565384 /* StationSelectionRouter.swift in Sources */,

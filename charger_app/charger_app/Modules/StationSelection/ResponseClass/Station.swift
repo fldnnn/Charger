@@ -16,6 +16,7 @@ struct Station: Codable {
     let distanceInKM: Double?
     let geoLocation: Location?
     let services: [String]?
+    var stationName: String?
 }
 
 struct Socket: Codable {

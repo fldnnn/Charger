@@ -21,18 +21,19 @@ protocol StationSelectionPresenterProtocol: AnyObject {
     var router: StationSelection.Router! { get set }
     
     func viewDidLoad()
-    func getStationList() -> [Station]
+    func getFilteredStationList() -> [Station]
     func onStationCellPressed(with station: Station)
 }
 
 protocol StationSelectionInteractorProtocol: AnyObject {
     var output: StationSelection.InteractorToPresenter? { get set }
     
-    func fetchStationList()
+    func fetchStationList(with cityName: String)
 }
 
 protocol StationSelectionInteractorToPresenterProtocol: AnyObject {
     func stationsFetched(_ stationResponse: [Station])
+    func stationDetailsFetched(_ stationDetailResponse: [Station])
 }
 
 protocol StationSelectionRouterProtocol: AnyObject {

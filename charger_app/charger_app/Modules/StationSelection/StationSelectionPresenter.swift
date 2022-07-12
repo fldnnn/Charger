@@ -15,16 +15,17 @@ class StationSelectionPresenter {
     var router: StationSelection.Router!
     var interactor: StationSelection.Interactor!
     var cityName: String?
-    private var stationList: [Station]?
+    private var allStations: [Station]?
+    private var filteredStations: [Station]?
 }
 
 extension StationSelectionPresenter: StationSelectionPresenterProtocol {
     func viewDidLoad() {
-        interactor?.fetchStationList()
+        interactor?.fetchStationList(with: cityName ?? "")
     }
     
-    func getStationList() -> [Station] {
-        stationList ?? []
+    func getFilteredStationList() -> [Station] {
+        filteredStations ?? []
     }
     
     func onStationCellPressed(with: Station) {
@@ -33,9 +34,14 @@ extension StationSelectionPresenter: StationSelectionPresenterProtocol {
 }
 
 extension StationSelectionPresenter: StationSelectionInteractorToPresenterProtocol {
+    
     func stationsFetched(_ stationResponse: [Station]) {
-        stationList = stationResponse
-        view?.updateUI(with: cityName ?? "", stationResponse.count)
+        allStations = stationResponse
+    }
+    
+    func stationDetailsFetched(_ stationDetailsResponse: [Station]) {
+        filteredStations = stationDetailsResponse
+        view?.updateUI(with: cityName ?? "", filteredStations?.count ?? 0)
         view?.reloadTableView()
     }
 }

@@ -21,6 +21,8 @@ class StationTableViewCell: UITableViewCell {
         if let distance = station.distanceInKM {
             distanceLabel.text = "\(distance.getCleanDistance()) km"
         }
-        // TODO: set name
+        if let stationName = station.stationName {
+            stationNameLabel.text = "\(stationName)"
+        }
     }
 }
