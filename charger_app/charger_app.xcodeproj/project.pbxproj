@@ -36,6 +36,12 @@
 		3117B084287C709300565384 /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B083287C709300565384 /* StationDetail.swift */; };
 		3117B086287C7EE500565384 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B085287C7EE500565384 /* Date+Ext.swift */; };
 		3117B089287DC1FE00565384 /* StationSelectionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B088287DC1FE00565384 /* StationSelectionConstants.swift */; };
+		3117B091287DD77A00565384 /* StationFilter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3117B08B287DD77A00565384 /* StationFilter.storyboard */; };
+		3117B092287DD77A00565384 /* StationFilterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B08C287DD77A00565384 /* StationFilterContract.swift */; };
+		3117B093287DD77A00565384 /* StationFilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B08D287DD77A00565384 /* StationFilterPresenter.swift */; };
+		3117B094287DD77A00565384 /* StationFilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B08E287DD77A00565384 /* StationFilterRouter.swift */; };
+		3117B095287DD77A00565384 /* StationFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B08F287DD77A00565384 /* StationFilterViewController.swift */; };
+		3117B096287DD77A00565384 /* StationFilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B090287DD77A00565384 /* StationFilterInteractor.swift */; };
 		3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */; };
 		3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */; };
 		3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */; };
@@ -111,6 +117,12 @@
 		3117B083287C709300565384 /* StationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetail.swift; sourceTree = "<group>"; };
 		3117B085287C7EE500565384 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		3117B088287DC1FE00565384 /* StationSelectionConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionConstants.swift; sourceTree = "<group>"; };
+		3117B08B287DD77A00565384 /* StationFilter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StationFilter.storyboard; sourceTree = "<group>"; };
+		3117B08C287DD77A00565384 /* StationFilterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationFilterContract.swift; sourceTree = "<group>"; };
+		3117B08D287DD77A00565384 /* StationFilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationFilterPresenter.swift; sourceTree = "<group>"; };
+		3117B08E287DD77A00565384 /* StationFilterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationFilterRouter.swift; sourceTree = "<group>"; };
+		3117B08F287DD77A00565384 /* StationFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationFilterViewController.swift; sourceTree = "<group>"; };
+		3117B090287DD77A00565384 /* StationFilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationFilterInteractor.swift; sourceTree = "<group>"; };
 		3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginPresenter.swift; sourceTree = "<group>"; };
 		3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginInteractor.swift; sourceTree = "<group>"; };
 		3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginRouter.swift; sourceTree = "<group>"; };
@@ -264,6 +276,19 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		3117B08A287DD75100565384 /* StationFilter */ = {
+			isa = PBXGroup;
+			children = (
+				3117B08B287DD77A00565384 /* StationFilter.storyboard */,
+				3117B08C287DD77A00565384 /* StationFilterContract.swift */,
+				3117B08D287DD77A00565384 /* StationFilterPresenter.swift */,
+				3117B08E287DD77A00565384 /* StationFilterRouter.swift */,
+				3117B08F287DD77A00565384 /* StationFilterViewController.swift */,
+				3117B090287DD77A00565384 /* StationFilterInteractor.swift */,
+			);
+			path = StationFilter;
+			sourceTree = "<group>";
+		};
 		311D78A92874B80E0092B75B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +352,7 @@
 		3130DE1A2872217D0077A4FB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3117B08A287DD75100565384 /* StationFilter */,
 				3117B069287B27A400565384 /* StationSelection */,
 				3117B0452879E04500565384 /* CitySelection */,
 				3117AFEF2879D40F00565384 /* Profile */,
@@ -516,6 +542,7 @@
 				3117B04C2879E06300565384 /* CitySelection.storyboard in Resources */,
 				3117B03E2879D9A300565384 /* Profile.storyboard in Resources */,
 				3117B07B287B30B300565384 /* StationTableViewCell.xib in Resources */,
+				3117B091287DD77A00565384 /* StationFilter.storyboard in Resources */,
 				3117B062287A0DBA00565384 /* CityTableViewCell.xib in Resources */,
 				3196114C287079D90068F5C3 /* LaunchScreen.storyboard in Resources */,
 				311D78BF2874C9D80092B75B /* Booking.storyboard in Resources */,
@@ -548,7 +575,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				311D78AB2874B82D0092B75B /* UITextField+Ext.swift in Sources */,
+				3117B092287DD77A00565384 /* StationFilterContract.swift in Sources */,
+				3117B094287DD77A00565384 /* StationFilterRouter.swift in Sources */,
 				3117B04E2879E06300565384 /* CitySelectionPresenter.swift in Sources */,
+				3117B093287DD77A00565384 /* StationFilterPresenter.swift in Sources */,
 				3117B082287C683A00565384 /* Double+Ext.swift in Sources */,
 				31961144287079D50068F5C3 /* ChargerLoginViewController.swift in Sources */,
 				311D78B72874C7D20092B75B /* LoginResponse.swift in Sources */,
@@ -560,11 +590,13 @@
 				3117B03F2879D9A300565384 /* ProfileContract.swift in Sources */,
 				3117B07D287C54A600565384 /* StationSelectionTableViewAdapter.swift in Sources */,
 				3117B086287C7EE500565384 /* Date+Ext.swift in Sources */,
+				3117B096287DD77A00565384 /* StationFilterInteractor.swift in Sources */,
 				3117B071287B27BD00565384 /* StationSelectionContract.swift in Sources */,
 				3117B0422879D9A300565384 /* ProfileViewController.swift in Sources */,
 				3117B0412879D9A300565384 /* ProfileRouter.swift in Sources */,
 				31961140287079D50068F5C3 /* AppDelegate.swift in Sources */,
 				3117B07A287B30B300565384 /* StationTableViewCell.swift in Sources */,
+				3117B095287DD77A00565384 /* StationFilterViewController.swift in Sources */,
 				3117B061287A0DBA00565384 /* CityTableViewCell.swift in Sources */,
 				31DB5FD22877566100BDCC95 /* LocationService.swift in Sources */,
 				3117B0432879D9A300565384 /* ProfileInteractor.swift in Sources */,

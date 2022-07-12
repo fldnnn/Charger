@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d8s-zC-T2t">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Station Filter View Controller-->
+        <scene sceneID="4e3-xv-bDR">
+            <objects>
+                <viewController storyboardIdentifier="StationFilter" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d8s-zC-T2t" customClass="StationFilterViewController" customModule="charger_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wT6-ai-9nW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fue-mU-seb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IFj-I9-EFs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cihaz Tipi" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsa-g2-CSK">
+                                <rect key="frame" x="26" y="10" width="109.5" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soket Tipi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lu-b4-wEe">
+                                <rect key="frame" x="26" y="100" width="111" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hizmetler" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3f-GT-5IT">
+                                <rect key="frame" x="26" y="279" width="109" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uzaklık (km)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMQ-j6-zQN">
+                                <rect key="frame" x="26" y="190" width="140.5" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArZ-yb-rqc">
+                                <rect key="frame" x="26" y="49" width="43" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="AC"/>
+                                <connections>
+                                    <action selector="acButtonPressed:" destination="d8s-zC-T2t" eventType="touchUpInside" id="Spd-Y9-Gtb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ4-M3-Blw">
+                                <rect key="frame" x="79" y="49" width="111" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="DC (HızlıSarj)"/>
+                                <connections>
+                                    <action selector="dcButtonPressed:" destination="d8s-zC-T2t" eventType="touchUpInside" id="vkI-mZ-8fd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhY-Lh-KP7">
+                                <rect key="frame" x="10" y="139" width="68" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Type 2"/>
+                                <connections>
+                                    <action selector="type2ButtonPressed:" destination="d8s-zC-T2t" eventType="touchUpInside" id="dFM-xc-waa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIh-uX-tma">
+                                <rect key="frame" x="88" y="139" width="53" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="CCS"/>
+                                <connections>
+                                    <action selector="ccsButtonPressed:" destination="d8s-zC-T2t" eventType="touchUpInside" id="wq3-h2-Jnh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMY-G8-NEj">
+                                <rect key="frame" x="151" y="139" width="92.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="CHAdeMO"/>
+                                <connections>
+                                    <action selector="chademoButtonPressed:" destination="d8s-zC-T2t" eventType="touchUpInside" id="ssn-po-Jsv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qs6-iT-2AF">
+                                <rect key="frame" x="26" y="318" width="76.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Otopark"/>
+                                <connections>
+                                    <action selector="carparkButtonPressed:" destination="d8s-zC-T2t" eventType="touchUpInside" id="BPY-f7-2wM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbI-zZ-dms">
+                                <rect key="frame" x="112.5" y="318" width="54" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Büfe"/>
+                                <connections>
+                                    <action selector="buffetButtonPressed:" destination="d8s-zC-T2t" eventType="touchUpInside" id="9ko-cO-lcn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBI-Xp-Kka">
+                                <rect key="frame" x="46" y="589" width="283" height="38"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="FİLTRELE">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="filterButtonPressed:" destination="d8s-zC-T2t" eventType="touchUpInside" id="Pnq-Ay-9uq"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="P6U-B9-EZO">
+                                <rect key="frame" x="24" y="229" width="327" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkY-Ph-kPt">
+                                <rect key="frame" x="176.5" y="318" width="58.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Wi-Fi"/>
+                                <connections>
+                                    <action selector="wifiButtonPressed:" destination="d8s-zC-T2t" eventType="touchUpInside" id="CHJ-WD-j6P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qhY-Lh-KP7" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leading" constant="10" id="3a8-D6-tq6"/>
+                            <constraint firstItem="qbI-zZ-dms" firstAttribute="top" secondItem="v3f-GT-5IT" secondAttribute="bottom" constant="10" id="4Om-vE-lx0"/>
+                            <constraint firstItem="Jsa-g2-CSK" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="10" id="5Vn-ab-xbX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tBI-Xp-Kka" secondAttribute="trailing" constant="30" id="62W-AL-z9a"/>
+                            <constraint firstItem="P6U-B9-EZO" firstAttribute="top" secondItem="mMQ-j6-zQN" secondAttribute="bottom" constant="10" id="72I-vO-olc"/>
+                            <constraint firstItem="v3f-GT-5IT" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="10" id="91R-l7-Sa7"/>
+                            <constraint firstItem="FMY-G8-NEj" firstAttribute="leading" secondItem="FIh-uX-tma" secondAttribute="trailing" constant="10" id="ILo-YW-yQB"/>
+                            <constraint firstItem="tBI-Xp-Kka" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="30" id="NKx-8M-Tma"/>
+                            <constraint firstItem="SJ4-M3-Blw" firstAttribute="top" secondItem="Jsa-g2-CSK" secondAttribute="bottom" constant="10" id="O13-uo-yFk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P6U-B9-EZO" secondAttribute="trailing" constant="10" id="PgX-Ol-uWO"/>
+                            <constraint firstItem="Jsa-g2-CSK" firstAttribute="top" secondItem="wT6-ai-9nW" secondAttribute="bottom" constant="10" id="Qsi-Cn-O5t"/>
+                            <constraint firstItem="qbI-zZ-dms" firstAttribute="leading" secondItem="qs6-iT-2AF" secondAttribute="trailing" constant="10" id="REr-ZH-aY7"/>
+                            <constraint firstItem="P6U-B9-EZO" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="10" id="WgU-ff-6sO"/>
+                            <constraint firstItem="FIh-uX-tma" firstAttribute="top" secondItem="7lu-b4-wEe" secondAttribute="bottom" constant="10" id="Xcz-LE-WDi"/>
+                            <constraint firstItem="SJ4-M3-Blw" firstAttribute="leading" secondItem="ArZ-yb-rqc" secondAttribute="trailing" constant="10" id="Z9j-SU-1f1"/>
+                            <constraint firstItem="v3f-GT-5IT" firstAttribute="top" secondItem="P6U-B9-EZO" secondAttribute="bottom" constant="20" id="am4-ky-fmY"/>
+                            <constraint firstItem="ArZ-yb-rqc" firstAttribute="top" secondItem="Jsa-g2-CSK" secondAttribute="bottom" constant="10" id="cQT-D7-aVL"/>
+                            <constraint firstItem="mMQ-j6-zQN" firstAttribute="top" secondItem="qhY-Lh-KP7" secondAttribute="bottom" constant="20" id="dk7-cz-Ea2"/>
+                            <constraint firstItem="wkY-Ph-kPt" firstAttribute="leading" secondItem="qbI-zZ-dms" secondAttribute="trailing" constant="10" id="gyE-s3-nAS"/>
+                            <constraint firstItem="qs6-iT-2AF" firstAttribute="top" secondItem="v3f-GT-5IT" secondAttribute="bottom" constant="10" id="if1-Uf-A28"/>
+                            <constraint firstItem="7lu-b4-wEe" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="10" id="kHk-cY-x4l"/>
+                            <constraint firstItem="FMY-G8-NEj" firstAttribute="top" secondItem="7lu-b4-wEe" secondAttribute="bottom" constant="10" id="mU1-8J-3so"/>
+                            <constraint firstItem="qs6-iT-2AF" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="10" id="mop-rL-oR2"/>
+                            <constraint firstItem="wkY-Ph-kPt" firstAttribute="top" secondItem="v3f-GT-5IT" secondAttribute="bottom" constant="10" id="nHR-ay-8sp"/>
+                            <constraint firstItem="FIh-uX-tma" firstAttribute="leading" secondItem="qhY-Lh-KP7" secondAttribute="trailing" constant="10" id="nqo-Jf-MXy"/>
+                            <constraint firstItem="7lu-b4-wEe" firstAttribute="top" secondItem="ArZ-yb-rqc" secondAttribute="bottom" constant="20" id="odQ-gX-bH8"/>
+                            <constraint firstItem="P6U-B9-EZO" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="10" id="piq-2G-mIx"/>
+                            <constraint firstItem="ArZ-yb-rqc" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="10" id="qTo-K6-Ldv"/>
+                            <constraint firstItem="Fue-mU-seb" firstAttribute="top" secondItem="tBI-Xp-Kka" secondAttribute="bottom" constant="40" id="wHD-pQ-CMn"/>
+                            <constraint firstItem="qhY-Lh-KP7" firstAttribute="top" secondItem="7lu-b4-wEe" secondAttribute="bottom" constant="10" id="yND-T7-NEZ"/>
+                            <constraint firstItem="mMQ-j6-zQN" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="10" id="zAf-g3-jR7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="i2Z-2f-Val"/>
+                    <connections>
+                        <outlet property="chargeTypeLabel" destination="Jsa-g2-CSK" id="Y8S-im-Az0"/>
+                        <outlet property="distanceLabel" destination="mMQ-j6-zQN" id="e8W-6C-zXK"/>
+                        <outlet property="servicesLabel" destination="v3f-GT-5IT" id="00o-GQ-yzv"/>
+                        <outlet property="socketType" destination="7lu-b4-wEe" id="w3c-IU-SH2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iqd-wc-fRj" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.200000000000003" y="83.208395802098963"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

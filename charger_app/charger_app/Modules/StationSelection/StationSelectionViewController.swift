@@ -23,6 +23,7 @@ class StationSelectionViewController: UIViewController {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         view.setGradientBackground()
+        title = "İstasyon Seçin"
         navigationController?.navigationBar.isHidden = false
         prepareTableView()
         stationSearchBar.delegate = self
