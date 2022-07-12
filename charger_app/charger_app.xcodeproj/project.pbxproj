@@ -35,6 +35,7 @@
 		3117B082287C683A00565384 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B081287C683A00565384 /* Double+Ext.swift */; };
 		3117B084287C709300565384 /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B083287C709300565384 /* StationDetail.swift */; };
 		3117B086287C7EE500565384 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B085287C7EE500565384 /* Date+Ext.swift */; };
+		3117B089287DC1FE00565384 /* StationSelectionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B088287DC1FE00565384 /* StationSelectionConstants.swift */; };
 		3117D55C28725AB600FBF010 /* ChargerLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */; };
 		3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */; };
 		3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */; };
@@ -109,6 +110,7 @@
 		3117B081287C683A00565384 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		3117B083287C709300565384 /* StationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetail.swift; sourceTree = "<group>"; };
 		3117B085287C7EE500565384 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		3117B088287DC1FE00565384 /* StationSelectionConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionConstants.swift; sourceTree = "<group>"; };
 		3117D55B28725AB600FBF010 /* ChargerLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginPresenter.swift; sourceTree = "<group>"; };
 		3117D55D28725B4500FBF010 /* ChargerLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginInteractor.swift; sourceTree = "<group>"; };
 		3117D56128733CAB00FBF010 /* ChargerLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerLoginRouter.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		3117B069287B27A400565384 /* StationSelection */ = {
 			isa = PBXGroup;
 			children = (
+				3117B087287DC1F300565384 /* Constants */,
 				3117B07E287C580700565384 /* ResponseClass */,
 				3117B076287B2F4600565384 /* StationSelecetionTableViewAdapter */,
 				3117B06A287B27BD00565384 /* StationSelection.storyboard */,
@@ -251,6 +254,14 @@
 				3117B083287C709300565384 /* StationDetail.swift */,
 			);
 			path = ResponseClass;
+			sourceTree = "<group>";
+		};
+		3117B087287DC1F300565384 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3117B088287DC1FE00565384 /* StationSelectionConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		311D78A92874B80E0092B75B /* Extensions */ = {
@@ -563,6 +574,7 @@
 				3117D55E28725B4500FBF010 /* ChargerLoginInteractor.swift in Sources */,
 				3117D56228733CAB00FBF010 /* ChargerLoginRouter.swift in Sources */,
 				3130DE1D287221CB0077A4FB /* ChargerLoginContract.swift in Sources */,
+				3117B089287DC1FE00565384 /* StationSelectionConstants.swift in Sources */,
 				31961142287079D50068F5C3 /* SceneDelegate.swift in Sources */,
 				3117B084287C709300565384 /* StationDetail.swift in Sources */,
 				3117B04F2879E06300565384 /* CitySelectionRouter.swift in Sources */,
