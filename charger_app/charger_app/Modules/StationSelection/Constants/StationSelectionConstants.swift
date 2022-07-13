@@ -23,7 +23,7 @@ enum ChargeType: String {
  
 enum SocketType: String {
     case type2 = "Type2"
-    case ccs = "CCS"
+    case csc = "CSC"
     case chademo = "CHAdeMO"
 }
 

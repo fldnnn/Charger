@@ -38,6 +38,8 @@ protocol StationFilterInteractorToPresenterProtocol: AnyObject {
 
 protocol StationFilterRouterProtocol: AnyObject {
     var presenter: StationFilter.Presenter? { get set }
+    
+    func goBack()
 }
 
 struct StationFilter {

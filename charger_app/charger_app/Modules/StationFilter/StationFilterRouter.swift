@@ -41,5 +41,7 @@ class StationFilterRouter {
 }
 
 extension StationFilterRouter: StationFilterRouterProtocol {
-    // TODO: Implement wireframe methods
+    func goBack() {
+        vC?.navigationController?.popViewController(animated: true)
+    }
 }

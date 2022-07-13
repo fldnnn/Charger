@@ -17,7 +17,7 @@ class StationFilterViewController: UIViewController {
     @IBOutlet private weak var acButton: UIButton!
     @IBOutlet private weak var dcButton: UIButton!
     @IBOutlet private weak var type2Button: UIButton!
-    @IBOutlet private weak var ccsButton: UIButton!
+    @IBOutlet private weak var cscButton: UIButton!
     @IBOutlet private weak var chademoButton: UIButton!
     @IBOutlet private weak var carparkButton: UIButton!
     @IBOutlet private weak var buffetButton: UIButton!
@@ -58,14 +58,16 @@ class StationFilterViewController: UIViewController {
             presenter?.removeSocketType(of: SocketType.type2)
         }
     }
-    @IBAction private func ccsButtonPressed(_ sender: Any) {
-        ccsButton.isSelected = !type2Button.isSelected
-        if ccsButton.isSelected {
-            presenter?.setSocketType(to: SocketType.ccs)
+    
+    @IBAction private func cscButtonPressed(_ sender: Any) {
+        cscButton.isSelected = !cscButton.isSelected
+        if cscButton.isSelected {
+            presenter?.setSocketType(to: SocketType.csc)
         } else {
-            presenter?.removeSocketType(of: SocketType.ccs)
+            presenter?.removeSocketType(of: SocketType.csc)
         }
     }
+
     @IBAction private func chademoButtonPressed(_ sender: Any) {
         chademoButton.isSelected = !chademoButton.isSelected
         if chademoButton.isSelected {
@@ -74,6 +76,7 @@ class StationFilterViewController: UIViewController {
             presenter?.removeSocketType(of: SocketType.chademo)
         }
     }
+    
     @IBAction private func carparkButtonPressed(_ sender: Any) {
         carparkButton.isSelected = !carparkButton.isSelected
         if carparkButton.isSelected {
@@ -82,6 +85,7 @@ class StationFilterViewController: UIViewController {
             presenter?.removeServiceType(of: ServiceType.carpark)
         }
     }
+    
     @IBAction private func buffetButtonPressed(_ sender: Any) {
         buffetButton.isSelected = !buffetButton.isSelected
         if buffetButton.isSelected {
@@ -90,6 +94,7 @@ class StationFilterViewController: UIViewController {
             presenter?.removeServiceType(of: ServiceType.buffet)
         }
     }
+    
     @IBAction private func wifiButtonPressed(_ sender: Any) {
         wifiButton.isSelected = !wifiButton.isSelected
         if wifiButton.isSelected {
@@ -98,6 +103,7 @@ class StationFilterViewController: UIViewController {
             presenter?.removeServiceType(of: ServiceType.wifi)
         }
     }
+    
     @IBAction private func filterButtonPressed(_ sender: Any) {
         presenter?.onFilterButtonPressed()
     }

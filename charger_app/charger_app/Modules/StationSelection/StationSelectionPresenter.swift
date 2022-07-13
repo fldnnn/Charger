@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class StationSelectionPresenter {
 
@@ -65,7 +66,32 @@ extension StationSelectionPresenter: StationSelectionInteractorToPresenterProtoc
 
 extension StationSelectionPresenter: StationFilterDelegate {
     func onFilterChanged(with filterSettings: FilterSettings) {
-        // TODO: filtreleme yap, reloadTableView
-        filteredStationsByStationName?.filter( { $0) })
+        var stationsWithMultipleFilter = [Station]()
+        filteredStationsByStationName?.forEach({ station in
+            station.sockets?.forEach({ socket in
+                if filterSettings.chargeType?.count ?? 0 > 0,
+                   let socketChargeType = socket.chargeType,
+                   let chargeTypeConverted = ChargeType(rawValue: socketChargeType),
+                   filterSettings.chargeType?.contains(chargeTypeConverted) ?? false {
+                    stationsWithMultipleFilter.append(station)
+                }
+                if filterSettings.socketTpye?.count ?? 0 > 0,
+                   let socketType = socket.socketType,
+                   let socketTypeConverted = SocketType(rawValue: socketType),
+                   filterSettings.socketTpye?.contains(socketTypeConverted) ?? false {
+                     stationsWithMultipleFilter.append(station)
+                }
+            })
+            // TODO: distance filter
+//            station.distanceInKM == filterSettings.distance
+            station.services?.forEach({ service in
+                if let serviceTypeConverted = ServiceType(rawValue: service),
+                    filterSettings.serviceType?.contains(serviceTypeConverted) ?? false {
+                        stationsWithMultipleFilter.append(station)
+                }
+            })
+        })
+        filteredStationsByStationName = stationsWithMultipleFilter
+        view?.reloadTableView()
     }
 }

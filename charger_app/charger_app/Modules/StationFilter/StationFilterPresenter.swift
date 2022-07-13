@@ -63,6 +63,7 @@ extension StationFilterPresenter: StationFilterPresenterProtocol {
     
     func onFilterButtonPressed() {
         delegate?.onFilterChanged(with: filterSettings)
+        router?.goBack()
     }
 }
 
