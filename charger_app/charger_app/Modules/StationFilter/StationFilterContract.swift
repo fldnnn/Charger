@@ -17,6 +17,16 @@ protocol StationFilterPresenterProtocol: AnyObject {
     var interactor: StationFilter.Interactor! { get set }
     var router: StationFilter.Router! { get set }
     
+    func setChargeType(to chargeType: ChargeType?)
+    func removeChargeType(of chargeType: ChargeType)
+    
+    func setSocketType(to socketType: SocketType?)
+    func removeSocketType(of socketType: SocketType)
+    
+    func setServiceType(to serviceType: ServiceType?)
+    func removeServiceType(of serviceType: ServiceType)
+    
+    func onFilterButtonPressed()
 }
 
 protocol StationFilterInteractorProtocol: AnyObject {

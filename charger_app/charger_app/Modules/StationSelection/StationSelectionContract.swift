@@ -25,6 +25,7 @@ protocol StationSelectionPresenterProtocol: AnyObject {
     func getFilteredStationList() -> [Station]
     func onStationCellPressed(with station: Station)
     func filterStations(with searchTerm: String)
+    func onFilterButtonPressed()
 }
 
 protocol StationSelectionInteractorProtocol: AnyObject {
@@ -40,6 +41,8 @@ protocol StationSelectionInteractorToPresenterProtocol: AnyObject {
 
 protocol StationSelectionRouterProtocol: AnyObject {
     var presenter: StationSelection.Presenter? { get set }
+    
+    func navigateToFilter(with delegate: StationFilterDelegate) 
 }
 
 struct StationSelection {

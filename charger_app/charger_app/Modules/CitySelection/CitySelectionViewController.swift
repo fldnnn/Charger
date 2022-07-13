@@ -22,12 +22,21 @@ class CitySelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        title = "Şehir Seçiniz"
         navigationController?.navigationBar.isHidden = false
         view.setGradientBackground()
         emptyStateView.setGradientBackground()
         prepareTableView()
         citySearchBar.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        title = "Şehir Seçiniz"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        title = ""
     }
     
     private func prepareTableView() {

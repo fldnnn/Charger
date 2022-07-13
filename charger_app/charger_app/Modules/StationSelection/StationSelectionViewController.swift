@@ -25,6 +25,7 @@ class StationSelectionViewController: UIViewController {
         view.setGradientBackground()
         title = "İstasyon Seçin"
         navigationController?.navigationBar.isHidden = false
+        addFilterButton()
         prepareTableView()
         stationSearchBar.delegate = self
     }
@@ -33,6 +34,15 @@ class StationSelectionViewController: UIViewController {
         stationTableView.delegate = adapter
         stationTableView.dataSource = adapter
         stationTableView.register(UINib(nibName: "StationTableViewCell", bundle: nil), forCellReuseIdentifier: "StationTableViewCell")
+    }
+    
+    private func addFilterButton() {
+        let filterButton = UIBarButtonItem(title: "Filtrele", style: .plain , target: self, action: #selector(onFilterButtonPressed))
+        navigationItem.rightBarButtonItem = filterButton
+    }
+    
+    @objc private func onFilterButtonPressed() {
+        presenter?.onFilterButtonPressed()
     }
 }
 

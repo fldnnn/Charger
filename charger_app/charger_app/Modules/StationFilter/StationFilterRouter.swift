@@ -15,7 +15,7 @@ class StationFilterRouter {
     weak var vC: UIViewController?
 
     // MARK: - Static methods
-    static func createModule() -> StationFilterViewController? {
+    static func createModule(with delegate: StationFilterDelegate) -> StationFilterViewController? {
         if let view = UIStoryboard(name: "StationFilter", bundle: nil).instantiateViewController(withIdentifier: "StationFilter") as? StationFilterViewController {
             let presenter = StationFilterPresenter()
             let interactor = StationFilterInteractor()
@@ -27,6 +27,7 @@ class StationFilterRouter {
             presenter.view = view
             presenter.interactor = interactor
             presenter.router = router
+            presenter.delegate = delegate
 
             interactor.output = presenter
 

@@ -57,4 +57,15 @@ extension StationSelectionPresenter: StationSelectionInteractorToPresenterProtoc
         view?.changeEmptyStateVisibility(to: !(filteredStationsByStationName?.isEmpty ?? false))
         view?.reloadTableView()
     }
+    
+    func onFilterButtonPressed() {
+        router?.navigateToFilter(with: self)
+    }
+}
+
+extension StationSelectionPresenter: StationFilterDelegate {
+    func onFilterChanged(with filterSettings: FilterSettings) {
+        // TODO: filtreleme yap, reloadTableView
+        filteredStationsByStationName?.filter( { $0) })
+    }
 }

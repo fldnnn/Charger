@@ -159,10 +159,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="i2Z-2f-Val"/>
                     <connections>
+                        <outlet property="acButton" destination="ArZ-yb-rqc" id="ADN-4S-7Kp"/>
+                        <outlet property="buffetButton" destination="qbI-zZ-dms" id="blB-Tu-M8e"/>
+                        <outlet property="carparkButton" destination="qs6-iT-2AF" id="TUH-iu-klS"/>
+                        <outlet property="ccsButton" destination="FIh-uX-tma" id="Qwm-MQ-1Zs"/>
+                        <outlet property="chademoButton" destination="FMY-G8-NEj" id="2fi-Bv-UQE"/>
                         <outlet property="chargeTypeLabel" destination="Jsa-g2-CSK" id="Y8S-im-Az0"/>
+                        <outlet property="dcButton" destination="SJ4-M3-Blw" id="CW2-Rf-yej"/>
                         <outlet property="distanceLabel" destination="mMQ-j6-zQN" id="e8W-6C-zXK"/>
                         <outlet property="servicesLabel" destination="v3f-GT-5IT" id="00o-GQ-yzv"/>
                         <outlet property="socketType" destination="7lu-b4-wEe" id="w3c-IU-SH2"/>
+                        <outlet property="type2Button" destination="qhY-Lh-KP7" id="uX6-mf-DN3"/>
+                        <outlet property="wifiButton" destination="wkY-Ph-kPt" id="qFn-pr-sVT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iqd-wc-fRj" sceneMemberID="firstResponder"/>

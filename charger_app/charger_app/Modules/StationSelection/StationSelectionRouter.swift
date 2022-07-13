@@ -43,5 +43,8 @@ class StationSelectionRouter {
 }
 
 extension StationSelectionRouter: StationSelectionRouterProtocol {
-    // TODO: Implement wireframe methods
+    func navigateToFilter(with delegate: StationFilterDelegate) {
+        let stationFilterVC = StationFilterRouter.createModule(with: delegate) ?? UIViewController()
+        vC?.navigationController?.pushViewController(stationFilterVC, animated: true)
+    }
 }

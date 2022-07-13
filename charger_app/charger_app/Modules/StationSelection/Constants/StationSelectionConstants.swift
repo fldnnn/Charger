@@ -20,3 +20,16 @@ enum ChargeType: String {
         }
     }
 }
+ 
+enum SocketType: String {
+    case type2 = "Type2"
+    case ccs = "CCS"
+    case chademo = "CHAdeMO"
+}
+
+enum ServiceType: String {
+    case carpark = "otopark"
+    case buffet = "büfe"
+    case wifi = "wi-fi"
+    
+}
