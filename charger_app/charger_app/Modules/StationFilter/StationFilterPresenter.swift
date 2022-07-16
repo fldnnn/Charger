@@ -61,6 +61,10 @@ extension StationFilterPresenter: StationFilterPresenterProtocol {
         }
     }
     
+    func setDistanceSliderValue(with value: Float) {
+        filterSettings.distance = Int(value)
+    }
+    
     func onFilterButtonPressed() {
         delegate?.onFilterChanged(with: filterSettings)
         router?.goBack()

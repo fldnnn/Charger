@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 class StationSelectionPresenter {
 
@@ -72,26 +71,38 @@ extension StationSelectionPresenter: StationFilterDelegate {
                 if filterSettings.chargeType?.count ?? 0 > 0,
                    let socketChargeType = socket.chargeType,
                    let chargeTypeConverted = ChargeType(rawValue: socketChargeType),
-                   filterSettings.chargeType?.contains(chargeTypeConverted) ?? false {
+                   filterSettings.chargeType?.contains(chargeTypeConverted) ?? false,
+                   !stationsWithMultipleFilter.contains(where: { $0.stationName == station.stationName }) {
                     stationsWithMultipleFilter.append(station)
+                    filteredStationsByStationName = stationsWithMultipleFilter
                 }
                 if filterSettings.socketTpye?.count ?? 0 > 0,
                    let socketType = socket.socketType,
                    let socketTypeConverted = SocketType(rawValue: socketType),
-                   filterSettings.socketTpye?.contains(socketTypeConverted) ?? false {
-                     stationsWithMultipleFilter.append(station)
+                   filterSettings.socketTpye?.contains(socketTypeConverted) ?? false,
+                   !stationsWithMultipleFilter.contains(where: { $0.stationName == station.stationName }) {
+                    stationsWithMultipleFilter.append(station)
+                    filteredStationsByStationName = stationsWithMultipleFilter
                 }
-            })
+            })                             
             // TODO: distance filter
-//            station.distanceInKM == filterSettings.distance
+//            if Int(station.distanceInKM ?? 0) <= filterSettings.distance ?? 0,
+//               !stationsWithMultipleFilter.contains(where: { $0.stationName == station.stationName }) {
+//                stationsWithMultipleFilter.append(station)
+//            }
             station.services?.forEach({ service in
                 if let serviceTypeConverted = ServiceType(rawValue: service),
-                    filterSettings.serviceType?.contains(serviceTypeConverted) ?? false {
-                        stationsWithMultipleFilter.append(station)
+                    filterSettings.serviceType?.contains(serviceTypeConverted) ?? false,
+                    !stationsWithMultipleFilter.contains(where: { $0.stationName == station.stationName }) {
+                    stationsWithMultipleFilter.append(station)
+                    filteredStationsByStationName = stationsWithMultipleFilter
                 }
             })
         })
-        filteredStationsByStationName = stationsWithMultipleFilter
+        if stationsWithMultipleFilter.isEmpty {
+            filteredStationsByStationName = filteredStationsByCityName
+        }
         view?.reloadTableView()
+        view?.updateUI(with: cityName ?? "", filteredStationsByStationName?.count ?? 0)
     }
 }

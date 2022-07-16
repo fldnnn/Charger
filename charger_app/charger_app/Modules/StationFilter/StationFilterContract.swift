@@ -25,8 +25,11 @@ protocol StationFilterPresenterProtocol: AnyObject {
     
     func setServiceType(to serviceType: ServiceType?)
     func removeServiceType(of serviceType: ServiceType)
+
+    func setDistanceSliderValue(with value: Float)
     
     func onFilterButtonPressed()
+    
 }
 
 protocol StationFilterInteractorProtocol: AnyObject {

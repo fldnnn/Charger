@@ -107,6 +107,10 @@ class StationFilterViewController: UIViewController {
     @IBAction private func filterButtonPressed(_ sender: Any) {
         presenter?.onFilterButtonPressed()
     }
+
+    @IBAction private func onSliderValueChanged(_ sender: UISlider) {
+        presenter?.setDistanceSliderValue(with: sender.value)
+    }
 }
 
 extension StationFilterViewController: StationFilterViewProtocol {

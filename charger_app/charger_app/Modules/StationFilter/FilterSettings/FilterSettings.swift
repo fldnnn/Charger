@@ -10,6 +10,6 @@ import Foundation
 class FilterSettings {
     var chargeType: [ChargeType]? = [ChargeType]()
     var socketTpye: [SocketType]? = [SocketType]()
-    var distance: Double?
+    var distance: Int?
     var serviceType: [ServiceType]? = [ServiceType]()
 }

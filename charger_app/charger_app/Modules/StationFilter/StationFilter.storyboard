@@ -110,8 +110,11 @@
                                     <action selector="filterButtonPressed:" destination="d8s-zC-T2t" eventType="touchUpInside" id="Pnq-Ay-9uq"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="P6U-B9-EZO">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="3" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="P6U-B9-EZO">
                                 <rect key="frame" x="24" y="229" width="327" height="31"/>
+                                <connections>
+                                    <action selector="onSliderValueChanged:" destination="d8s-zC-T2t" eventType="valueChanged" id="Vld-LA-bLb"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkY-Ph-kPt">
                                 <rect key="frame" x="176.5" y="318" width="58.5" height="31"/>
