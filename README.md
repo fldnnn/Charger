@@ -1,2 +1,6 @@
 # Charger
-Charger Application for iOS built with Swift 
+## Patika.dev Arçelik Bootcamp Final Project
+Charger Application for iOS using VIPER architecture.
+
+## Screenshots
+
