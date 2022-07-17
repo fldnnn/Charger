@@ -53,11 +53,17 @@ extension CitySelectionViewController: CitySelectionViewProtocol {
      
     func changeEmptyStateVisibility(to isVisible: Bool) {
         emptyStateView.isHidden = isVisible
+        citySearchBar.layer.borderColor = UIColor.state.cgColor
+        citySearchBar.layer.borderWidth = 2
     }
 }
 
 extension CitySelectionViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         presenter?.filterCities(with: searchBar.text ?? "")
+        if emptyStateView.isHidden == true {
+            citySearchBar.layer.borderColor = UIColor.main.cgColor
+            citySearchBar.layer.borderWidth = 2
+        }
     }
 }

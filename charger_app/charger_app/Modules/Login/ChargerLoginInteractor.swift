@@ -96,7 +96,7 @@ class LoginInteractor: Login.Interactor {
 
             UserDefaults.standard.set(location.latitude, forKey: "latitude")
             UserDefaults.standard.set(location.longitude, forKey: "longitude")
-             
+            
             UserDefaults.standard.set("nil", forKey: "nil")
         }
     }

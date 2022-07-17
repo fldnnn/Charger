@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V01-od-bAP" userLabel="Login Button">
-                                <rect key="frame" x="150" y="524" width="114" height="31"/>
+                                <rect key="frame" x="100" y="507" width="214" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="GİRİŞ YAP"/>
                                 <connections>
@@ -25,9 +25,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-POSTA ADRESİNİZ" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xa8-iG-tGb" userLabel="Email TextField">
-                                <rect key="frame" x="45" y="387" width="324" height="34"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="45" y="387" width="324" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="JXB-Xp-zy8"/>
+                                    <constraint firstAttribute="height" constant="50" id="k0K-oa-KH0"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bod-87-VpC">
@@ -38,11 +42,11 @@
                         <viewLayoutGuide key="safeArea" id="0QB-iB-1co"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="V01-od-bAP" firstAttribute="top" secondItem="Xa8-iG-tGb" secondAttribute="bottom" constant="103" id="DmU-l0-All"/>
+                            <constraint firstItem="V01-od-bAP" firstAttribute="top" secondItem="Xa8-iG-tGb" secondAttribute="bottom" constant="70" id="DmU-l0-All"/>
                             <constraint firstItem="Xa8-iG-tGb" firstAttribute="top" secondItem="0QB-iB-1co" secondAttribute="top" constant="343" id="LGn-ux-bc7"/>
-                            <constraint firstItem="V01-od-bAP" firstAttribute="leading" secondItem="0QB-iB-1co" secondAttribute="leading" constant="150" id="PLh-Jj-cOw"/>
+                            <constraint firstItem="V01-od-bAP" firstAttribute="leading" secondItem="0QB-iB-1co" secondAttribute="leading" constant="100" id="PLh-Jj-cOw"/>
                             <constraint firstItem="Xa8-iG-tGb" firstAttribute="leading" secondItem="0QB-iB-1co" secondAttribute="leading" constant="45" id="U7d-p0-jHz"/>
-                            <constraint firstItem="0QB-iB-1co" firstAttribute="trailing" secondItem="V01-od-bAP" secondAttribute="trailing" constant="150" id="nUq-t4-bnL"/>
+                            <constraint firstItem="0QB-iB-1co" firstAttribute="trailing" secondItem="V01-od-bAP" secondAttribute="trailing" constant="100" id="nUq-t4-bnL"/>
                             <constraint firstItem="0QB-iB-1co" firstAttribute="trailing" secondItem="Xa8-iG-tGb" secondAttribute="trailing" constant="45" id="vox-sP-huT"/>
                         </constraints>
                     </view>

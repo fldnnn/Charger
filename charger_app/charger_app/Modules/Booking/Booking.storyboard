@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uki-Bz-Egl">
-                                <rect key="frame" x="108" y="518.5" width="159" height="31"/>
+                                <rect key="frame" x="96" y="518.5" width="183" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="RANDEVU OLUŞTUR"/>
                                 <connections>
@@ -66,7 +66,7 @@
                             <constraint firstItem="L3h-uU-9cT" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leading" constant="32" id="1w8-6c-ISJ"/>
                             <constraint firstItem="VOi-qc-v5I" firstAttribute="top" secondItem="wT6-ai-9nW" secondAttribute="bottom" id="3E0-Rv-vf1"/>
                             <constraint firstItem="VOi-qc-v5I" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leading" id="6VV-ST-k4r"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uki-Bz-Egl" secondAttribute="trailing" constant="92" id="DR9-4x-jlJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uki-Bz-Egl" secondAttribute="trailing" constant="80" id="DR9-4x-jlJ"/>
                             <constraint firstItem="Qju-40-aYR" firstAttribute="top" secondItem="CpV-AV-myL" secondAttribute="bottom" constant="68" id="ECL-xn-h09"/>
                             <constraint firstItem="CpV-AV-myL" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="51" id="ENT-0K-UJ6"/>
                             <constraint firstAttribute="trailing" secondItem="L3h-uU-9cT" secondAttribute="trailing" id="F46-pg-2lh"/>
@@ -74,7 +74,7 @@
                             <constraint firstItem="L3h-uU-9cT" firstAttribute="top" secondItem="Qju-40-aYR" secondAttribute="bottom" constant="32" id="VEx-iJ-Zdi"/>
                             <constraint firstItem="uki-Bz-Egl" firstAttribute="top" secondItem="L3h-uU-9cT" secondAttribute="bottom" constant="81" id="Y0j-3J-COV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qju-40-aYR" secondAttribute="trailing" constant="51" id="h5I-TB-xoE"/>
-                            <constraint firstItem="uki-Bz-Egl" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="92" id="kcV-xo-qiN"/>
+                            <constraint firstItem="uki-Bz-Egl" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="80" id="kcV-xo-qiN"/>
                             <constraint firstItem="Qju-40-aYR" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leadingMargin" constant="51" id="qPd-CA-9hO"/>
                             <constraint firstAttribute="trailing" secondItem="VOi-qc-v5I" secondAttribute="trailing" id="rZb-Lz-HeD"/>
                             <constraint firstItem="CpV-AV-myL" firstAttribute="top" secondItem="VOi-qc-v5I" secondAttribute="bottom" constant="94" id="vpu-YO-eQd"/>
